@@ -1,7 +1,6 @@
 """
-Training Pipeline
-=================
-Run this script to:
+Training Pipeline:
+This script runs to:
   1. Generate synthetic access-log data
   2. Train the baseline profiler
   3. Train the LSTM autoencoder detector
@@ -43,9 +42,8 @@ def print_header(title: str):
     print("=" * 60)
 
 
-# ===========================================================================
 # STEP 1: Generate Data
-# ===========================================================================
+
 print_header("STEP 1 — Synthetic Data Generation")
 
 if os.path.exists("data/synthetic_logs.csv"):
@@ -69,9 +67,8 @@ print(f"Train anomaly rate: {(train_df['label'] != 'normal').mean() * 100:.2f}%"
 print(f"Test  anomaly rate: {(test_df['label']  != 'normal').mean() * 100:.2f}%")
 
 
-# ===========================================================================
 # STEP 2: Baseline Profiler
-# ===========================================================================
+
 print_header("STEP 2 — Baseline Profiler Training")
 
 profiler = BaselineProfiler()
@@ -90,9 +87,8 @@ print(f"  Baseline score — train normal  mean: "
       f"{train_bp_scores.loc[train_df['label'] == 'normal', 'baseline_score'].mean():.4f}")
 
 
-# ===========================================================================
 # STEP 3: LSTM Detector
-# ===========================================================================
+
 print_header("STEP 3 — LSTM Sequence Detector Training")
 
 detector = LSTMDetector(epochs=20, batch_size=256)
@@ -111,9 +107,8 @@ print("Computing LSTM errors on full dataset for classifier...")
 all_errors, all_eids, all_ts = detector.score_dataframe(df_sorted)
 
 
-# ===========================================================================
 # STEP 4: Anomaly Classifier
-# ===========================================================================
+
 print_header("STEP 4 — Anomaly Type Classifier Training")
 
 print("Engineering features...")
@@ -141,9 +136,8 @@ weighted_f1 = classifier.fit(
 classifier.save("models/saved/classifier.pkl")
 
 
-# ===========================================================================
 # STEP 5: Evaluation on Test Set
-# ===========================================================================
+
 print_header("STEP 5 — Full Pipeline Evaluation")
 
 # Engineer test features
@@ -173,10 +167,8 @@ fp_at_1pct = sum(1 for i in flagged_1pct if y_true_bin[i] == 0)
 print(f"FP rate @top-1%   : {fp_at_1pct / max(len(flagged_1pct), 1) * 100:.2f}%  "
       f"({fp_at_1pct}/{len(flagged_1pct)} alerts)")
 
-
-# ===========================================================================
 # STEP 6: Build Alert Database for API
-# ===========================================================================
+
 print_header("STEP 6 — Building Alert Database")
 
 explainer = AlertExplainer(classifier)
