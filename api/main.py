@@ -1,6 +1,5 @@
 """
-FastAPI Backend
-===============
+FastAPI Backend:
 Serves trained model outputs and alert data to the analyst dashboard.
 
 Endpoints:
@@ -24,9 +23,9 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-# ---------------------------------------------------------------------------
+
 # Load pre-built databases
-# ---------------------------------------------------------------------------
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def load_json(filename: str):
@@ -43,9 +42,9 @@ stats_data: dict = load_json("stats.json") or {}
 # Index alerts by ID
 alerts_index = {a["id"]: a for a in alerts_db}
 
-# ---------------------------------------------------------------------------
+
 # App setup
-# ---------------------------------------------------------------------------
+
 app = FastAPI(
     title="Behavioral Anomaly Detection API",
     description="AI-powered cybersecurity anomaly detection system",
@@ -60,9 +59,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ---------------------------------------------------------------------------
+
 # Models
-# ---------------------------------------------------------------------------
+
 class ScoreRequest(BaseModel):
     entity_id: str
     entity_type: str = "user"
@@ -77,9 +76,9 @@ class ScoreRequest(BaseModel):
     device_fingerprint: str = "{}"
 
 
-# ---------------------------------------------------------------------------
+
 # Routes
-# ---------------------------------------------------------------------------
+
 @app.get("/")
 def health():
     return {

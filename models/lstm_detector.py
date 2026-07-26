@@ -1,6 +1,6 @@
 """
 LSTM Autoencoder — Sequence-Aware Anomaly Detector
-====================================================
+
 Learns to reconstruct sequences of access events for each entity.
 High reconstruction error → the sequence deviates from learned normal patterns.
 
@@ -28,9 +28,9 @@ from torch.utils.data import DataLoader, TensorDataset
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 
 
-# ---------------------------------------------------------------------------
+
 # Feature Engineering
-# ---------------------------------------------------------------------------
+
 ALL_GEOS = [
     "US-NY", "US-CA", "US-TX", "UK-LDN", "DE-BER",
     "IN-MUM", "SG-SGP", "AU-SYD", "BR-SAO", "JP-TYO",
@@ -114,9 +114,9 @@ def build_sequences(df: pd.DataFrame, window: int = WINDOW_SIZE):
     return X, entity_ids, timestamps
 
 
-# ---------------------------------------------------------------------------
+
 # LSTM Autoencoder Model
-# ---------------------------------------------------------------------------
+
 class LSTMAutoencoder(nn.Module):
     def __init__(self, feature_dim: int = FEATURE_DIM, hidden1: int = 128, hidden2: int = 64):
         super().__init__()
@@ -151,9 +151,9 @@ class LSTMAutoencoder(nn.Module):
         return out  # (batch, window, feature_dim)
 
 
-# ---------------------------------------------------------------------------
+
 # Detector wrapper
-# ---------------------------------------------------------------------------
+
 class LSTMDetector:
     def __init__(self, feature_dim: int = FEATURE_DIM, window: int = WINDOW_SIZE,
                  hidden1: int = 128, hidden2: int = 64, epochs: int = 30,

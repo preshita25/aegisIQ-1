@@ -17,9 +17,8 @@ import numpy as np
 import pandas as pd
 import shap
 
-# ---------------------------------------------------------------------------
 # Human-readable feature descriptions
-# ---------------------------------------------------------------------------
+
 FEATURE_LABELS = {
     "hour": "Login hour",
     "hour_sin": "Hour (cyclical sine)",
@@ -74,9 +73,9 @@ RISK_COLORS = {
 }
 
 
-# ---------------------------------------------------------------------------
+
 # Explainer class
-# ---------------------------------------------------------------------------
+
 class AlertExplainer:
     def __init__(self, classifier):
         """

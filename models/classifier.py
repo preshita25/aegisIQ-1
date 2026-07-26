@@ -1,6 +1,5 @@
 """
 Anomaly Type Classifier
-========================
 Given a flagged event, classifies it into one of the attack categories:
   - normal
   - brute_force
@@ -38,9 +37,8 @@ LABEL_ORDER = [
 ]
 
 
-# ---------------------------------------------------------------------------
 # Feature engineering for classifier
-# ---------------------------------------------------------------------------
+
 def engineer_features(
     df: pd.DataFrame,
     baseline_scores: pd.DataFrame,
@@ -166,9 +164,8 @@ def engineer_features(
     return feats.fillna(0.0)
 
 
-# ---------------------------------------------------------------------------
 # Classifier
-# ---------------------------------------------------------------------------
+
 class AnomalyClassifier:
     def __init__(self):
         self.model: xgb.XGBClassifier | None = None

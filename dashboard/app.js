@@ -1,10 +1,7 @@
-/* ============================================================
-   CyberSentinel — Dashboard Application Logic
-   ============================================================ */
 
 const API_BASE = 'http://localhost:8000';
 
-// ─── State ────────────────────────────────────────────────
+// State
 let state = {
   alerts: [],
   alertsTotal: 0,
@@ -17,7 +14,7 @@ let state = {
   debounceTimer: null,
 };
 
-// ─── Chart.js Global Defaults ────────────────────────────
+// Chart.js Global Defaults
 // Matches exact design tokens from aegisIQ-1 tailwind.config.js
 if (typeof Chart !== 'undefined') {
   Chart.defaults.font.family = "'Inter', ui-sans-serif, system-ui, sans-serif";
@@ -33,7 +30,7 @@ if (typeof Chart !== 'undefined') {
   Chart.defaults.plugins.tooltip.cornerRadius = 8;
 }
 
-// ─── Startup ──────────────────────────────────────────────
+// Startup
 window.addEventListener('DOMContentLoaded', async () => {
   startClock();
   await initApp();
@@ -296,14 +293,14 @@ function renderDashboard() {
 
 // ─── Charts ───────────────────────────────────────────────
 const CHART_COLORS = {
-  brute_force:         '#ef4444',
+  brute_force:         '#2d428a',
   impossible_travel:   '#f97316',
   credential_stuffing: '#ef4444',
-  lateral_movement:    '#f97316',
+  lateral_movement:    '#eea673',
   device_spoofing:     '#eab308',
-  low_and_slow:        '#eab308',
-  insider_drift:       '#3b82f6',
-  normal:              '#22c55e',
+  low_and_slow:        '#026634',
+  insider_drift:       '#337cf3',
+  normal:              '#2af072',
 };
 
 function renderCharts() {

@@ -1,6 +1,6 @@
 """
-Synthetic Access-Log Data Generator
-====================================
+Synthetic Access-Log Data Generator:
+
 Generates per-entity behavioural profiles, then injects attack patterns
 at controlled rates (0.5–3% of sessions) with ground-truth labels.
 
@@ -28,9 +28,9 @@ fake = Faker()
 np.random.seed(42)
 random.seed(42)
 
-# ---------------------------------------------------------------------------
+
 # Configuration
-# ---------------------------------------------------------------------------
+
 NUM_USERS          = 80
 NUM_SERVICE_ACCTS  = 15
 NUM_EDGE_DEVICES   = 25
@@ -54,9 +54,9 @@ AUTH_METHODS  = ["password", "token", "certificate", "biometric"]
 OS_LIST       = ["Windows 11", "Ubuntu 22.04", "macOS 14", "CentOS 7"]
 PROTO_LIST    = ["TLS1.3", "TLS1.2", "SSH", "MQTT"]
 
-# ---------------------------------------------------------------------------
+
 # Helper: stable fingerprint for an entity
-# ---------------------------------------------------------------------------
+
 def make_fingerprint(os: str, mac: str, proto: str) -> str:
     return json.dumps({"os": os, "mac": mac, "proto": proto})
 
@@ -65,9 +65,9 @@ def random_mac() -> str:
     return ":".join(f"{random.randint(0, 255):02x}" for _ in range(6))
 
 
-# ---------------------------------------------------------------------------
+
 # Build per-entity baseline profiles
-# ---------------------------------------------------------------------------
+
 def build_entity_profiles():
     profiles = {}
     entity_id_counter = 0
@@ -123,9 +123,9 @@ def build_entity_profiles():
     return profiles
 
 
-# ---------------------------------------------------------------------------
+
 # Generate a single NORMAL event for an entity
-# ---------------------------------------------------------------------------
+
 def normal_event(eid: str, profile: dict, base_time: datetime) -> dict:
     hour = random.choice(profile["typical_hours"])
     minute = random.randint(0, 59)
@@ -161,9 +161,9 @@ def normal_event(eid: str, profile: dict, base_time: datetime) -> dict:
     }
 
 
-# ---------------------------------------------------------------------------
+
 # Attack pattern generators
-# ---------------------------------------------------------------------------
+
 def brute_force_events(eid: str, profile: dict, base_time: datetime) -> list:
     """Rapid repeated failed-auth attempts from one source in short window."""
     events = []
@@ -311,9 +311,9 @@ def insider_drift_events(eid: str, profile: dict, base_time: datetime) -> list:
     return events
 
 
-# ---------------------------------------------------------------------------
+
 # Main generator
-# ---------------------------------------------------------------------------
+
 def generate_dataset(n_events: int = None, output_path: str = "data/synthetic_logs.csv") -> pd.DataFrame:
     import os
     os.makedirs(os.path.dirname(output_path), exist_ok=True)

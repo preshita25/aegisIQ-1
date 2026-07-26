@@ -1,6 +1,5 @@
 """
-Baseline Profiler
-=================
+Baseline Profiler:
 Builds per-entity statistical behavioural profiles from historical access logs.
 For each entity it learns:
   - Typical login hour distribution
@@ -26,9 +25,8 @@ from sklearn.svm import OneClassSVM
 from sklearn.preprocessing import StandardScaler
 
 
-# ---------------------------------------------------------------------------
 # Per-entity profile object
-# ---------------------------------------------------------------------------
+
 class EntityProfile:
     def __init__(self, entity_id: str, entity_type: str):
         self.entity_id    = entity_id
@@ -62,9 +60,8 @@ class EntityProfile:
             self.fail_count += 1
         self.event_count += 1
 
-    # ------------------------------------------------------------------
     # Derived statistics
-    # ------------------------------------------------------------------
+
     @property
     def typical_hours(self) -> list:
         """Hours that cover 80% of activity."""
@@ -105,9 +102,9 @@ class EntityProfile:
     def known_fingerprints(self) -> set:
         return set(self.fingerprints.keys())
 
-    # ------------------------------------------------------------------
+
     # Score a single event — returns dict of deviation features
-    # ------------------------------------------------------------------
+
     def score_event(self, row: pd.Series) -> dict:
         ts = pd.to_datetime(row["timestamp"])
         hour = ts.hour
@@ -170,9 +167,8 @@ class EntityProfile:
         }
 
 
-# ---------------------------------------------------------------------------
 # Baseline Profiler — manages all entity profiles
-# ---------------------------------------------------------------------------
+
 class BaselineProfiler:
     def __init__(self):
         self.profiles: dict[str, EntityProfile] = {}
@@ -180,7 +176,6 @@ class BaselineProfiler:
         self._scaler: StandardScaler | None = None
         self._global_features: list[list[float]] = []
 
-    # ------------------------------------------------------------------
     def fit(self, df: pd.DataFrame):
         """Build per-entity profiles from historical log dataframe."""
         print("Building per-entity baseline profiles...")
@@ -210,7 +205,6 @@ class BaselineProfiler:
         print(f"  Profiles built: {len(self.profiles)}")
         print(f"  OC-SVM trained on {len(feat_rows):,} normal samples")
 
-    # ------------------------------------------------------------------
     def score(self, row: pd.Series) -> dict:
         """Score a single event. Returns deviation dict + baseline_score."""
         eid = row["entity_id"]
@@ -239,7 +233,7 @@ class BaselineProfiler:
             rows.append(self.score(row))
         return pd.DataFrame(rows, index=df.index)
 
-    # ------------------------------------------------------------------
+    
     def save(self, path: str = "models/saved/baseline_profiler.pkl"):
         os.makedirs(os.path.dirname(path), exist_ok=True)
         joblib.dump(self, path)
