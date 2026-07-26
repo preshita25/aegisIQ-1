@@ -3,6 +3,19 @@
 A full-stack cybersecurity AI system that detects and classifies behavioral anomalies in access logs using sequence-aware ML models and an analyst-facing dashboard.
 
 ---
+## Live Demo
+
+Dashboard:
+https://aegisiq-three.vercel.app/
+
+Backend API:
+https://aegisiq-api.onrender.com
+
+Swagger Docs:
+https://aegisiq-api.onrender.com/docs
+
+API Statistics:
+https://aegisiq-api.onrender.com/stats
 
 ## Architecture
 
