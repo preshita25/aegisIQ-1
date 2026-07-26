@@ -1,7 +1,7 @@
 
 const API_BASE = 'https://aegisiq-api.onrender.com';
 
-// State
+//  State 
 let state = {
   alerts: [],
   alertsTotal: 0,
@@ -14,8 +14,7 @@ let state = {
   debounceTimer: null,
 };
 
-// Chart.js Global Defaults
-// Matches exact design tokens from aegisIQ-1 tailwind.config.js
+// Chart.js Global Defaults 
 if (typeof Chart !== 'undefined') {
   Chart.defaults.font.family = "'Inter', ui-sans-serif, system-ui, sans-serif";
   Chart.defaults.color = '#94a3b8';          // slate-400
@@ -30,7 +29,7 @@ if (typeof Chart !== 'undefined') {
   Chart.defaults.plugins.tooltip.cornerRadius = 8;
 }
 
-// Startup
+// Startup 
 window.addEventListener('DOMContentLoaded', async () => {
   startClock();
   await initApp();
@@ -48,7 +47,7 @@ async function initApp() {
   hideLoading();
 }
 
-// ─── Clock ────────────────────────────────────────────────
+// Clock 
 function startClock() {
   function tick() {
     const now = new Date();
@@ -59,7 +58,7 @@ function startClock() {
   setInterval(tick, 1000);
 }
 
-// ─── API ──────────────────────────────────────────────────
+// API 
 async function apiFetch(path) {
   try {
     const res = await fetch(API_BASE + path);
@@ -90,7 +89,7 @@ async function checkAPI() {
   }
 }
 
-// ─── Demo Data (when API is offline) ─────────────────────
+// Demo Data (when API is offline)
 function injectDemoData() {
   const LABELS = ['brute_force','impossible_travel','credential_stuffing',
                   'lateral_movement','device_spoofing','low_and_slow','insider_drift','normal'];
@@ -202,7 +201,7 @@ function getRiskColor(label) {
   return c[label] || '#94a3b8';
 }
 
-// ─── Data Fetching ────────────────────────────────────────
+// Data Fetching 
 async function fetchStats() {
   const data = await apiFetch('/stats');
   if (data) state.stats = data;
@@ -269,7 +268,7 @@ async function refreshData() {
   document.getElementById('refreshBtn').textContent = 'Refresh';
 }
 
-// ─── Dashboard Render ─────────────────────────────────────
+// Dashboard Render
 function renderDashboard() {
   const s = state.stats;
 
@@ -291,16 +290,16 @@ function renderDashboard() {
   renderRecentAlerts();
 }
 
-// ─── Charts ───────────────────────────────────────────────
+// Charts ─
 const CHART_COLORS = {
-  brute_force:         '#2d428a',
+  brute_force:         '#07491b',
   impossible_travel:   '#f97316',
   credential_stuffing: '#ef4444',
-  lateral_movement:    '#eea673',
+  lateral_movement:    '#df48cb',
   device_spoofing:     '#eab308',
-  low_and_slow:        '#026634',
-  insider_drift:       '#337cf3',
-  normal:              '#2af072',
+  low_and_slow:        '#999074',
+  insider_drift:       '#3b82f6',
+  normal:              '#22c55e',
 };
 
 function renderCharts() {
@@ -419,7 +418,7 @@ function renderSeverityChart() {
   });
 }
 
-// ─── Top Risk Entities ────────────────────────────────────
+// Top Risk Entities ────────────────────────────────────
 function renderTopEntities() {
   const el = document.getElementById('topEntitiesBody');
   if (!el) return;
@@ -456,7 +455,7 @@ function renderTopEntities() {
   }).join('');
 }
 
-// ─── Alerts Table ─────────────────────────────────────────
+// Alerts Table
 function renderRecentAlerts() {
   const tbody = document.getElementById('recentAlertsBody');
   if (!tbody) return;
@@ -472,7 +471,7 @@ function renderAlertsTable() {
 
   if (!state.alerts.length) {
     tbody.innerHTML = `<tr><td colspan="9"><div class="empty-state">
-      <div class="empty-state-icon">🔍</div>
+      <div class="empty-state-icon"></div>
       <div class="empty-state-text">No alerts match your filters</div>
     </div></td></tr>`;
     return;
@@ -487,7 +486,7 @@ function renderAlertsTable() {
       </td>
       <td><span class="text-mono" style="font-size:0.72rem;color:var(--text-secondary)">${fmtTS(a.timestamp)}</span></td>
       <td><span class="label-chip ${a.predicted_label}">${a.predicted_label.replace(/_/g,' ')}</span></td>
-      <td><span class="severity-badge ${a.severity}">● ${a.severity}</span></td>
+      <td><span class="severity-badge ${a.severity}">${a.severity}</span></td>
       <td>
         <div class="risk-bar-wrap">
           <div class="risk-bar">
@@ -499,34 +498,42 @@ function renderAlertsTable() {
       <td style="font-size:0.75rem;color:var(--text-secondary)">${a.geo_location}</td>
       <td style="font-size:0.72rem;color:var(--text-muted);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${a.resource_accessed}</td>
       <td>${a.auth_success
-        ? '<span style="color:#4ade80;font-size:0.7rem">✓ OK</span>'
-        : '<span style="color:#f87171;font-size:0.7rem">✗ FAIL</span>'}</td>
+        ? '<span style="color:#4ade80;font-size:0.7rem">OK</span>'
+        : '<span style="color:#f87171;font-size:0.7rem">FAIL</span>'}</td>
     </tr>
   `).join('');
 }
 
 function renderAlertRows(alerts) {
-  return alerts.map(a => `
-    <tr class="alert-row" onclick="openDetail('${a.id}')">
-      <td><span class="text-mono" style="font-size:0.72rem;color:var(--text-muted)">${a.id}</span></td>
-      <td style="font-size:0.8rem;font-weight:600">${a.entity_id}</td>
-      <td><span class="text-mono" style="font-size:0.72rem;color:var(--text-secondary)">${fmtTS(a.timestamp)}</span></td>
-      <td><span class="label-chip ${a.predicted_label}">${a.predicted_label.replace(/_/g,' ')}</span></td>
-      <td><span class="severity-badge ${a.severity}">● ${a.severity}</span></td>
-      <td>
-        <div class="risk-bar-wrap">
-          <div class="risk-bar">
-            <div class="risk-bar-fill" style="width:${(a.risk_score*100).toFixed(0)}%;background:${riskGradient(a.risk_score)}"></div>
+  return alerts.map(a => {
+    const ts = fmtTS(a.timestamp);
+    const labelName = (a.predicted_label || '').replace(/_/g, ' ');
+    const statusHtml = a.auth_success
+      ? '<span style="color:#4ade80;font-size:0.7rem">OK</span>'
+      : '<span style="color:#f87171;font-size:0.7rem">FAIL</span>';
+
+    return `
+      <tr class="alert-row" onclick="openDetail('${a.id}')">
+        <td><span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--brand-lt)">${a.id}</span></td>
+        <td><span style="font-weight:600">${a.entity_id}</span></td>
+        <td><span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted)">${ts}</span></td>
+        <td><span class="label-chip ${a.predicted_label}">${labelName}</span></td>
+        <td><span class="severity-badge ${a.severity}">${a.severity}</span></td>
+        <td>
+          <div class="risk-bar-wrap">
+            <div class="risk-bar">
+              <div class="risk-bar-fill" style="width:${(a.risk_score*100).toFixed(0)}%;background:${riskGradient(a.risk_score)}"></div>
+            </div>
+            <span class="risk-val" style="color:${riskColor(a.risk_score)}">${(a.risk_score*100).toFixed(0)}%</span>
           </div>
-          <span class="risk-val" style="color:${riskColor(a.risk_score)}">${(a.risk_score*100).toFixed(0)}%</span>
-        </div>
-      </td>
-      <td style="font-size:0.75rem;color:var(--text-secondary)">${a.resource_accessed}</td>
-    </tr>
-  `).join('');
+        </td>
+        <td style="font-size:0.75rem;color:var(--text-secondary)">${a.resource_accessed}</td>
+      </tr>
+    `;
+  }).join('');
 }
 
-// ─── Alert Pagination ─────────────────────────────────────
+// Alert Pagination ─────────────────────────────────────
 function renderAlertsPagination() {
   const el = document.getElementById('alertsPagination');
   if (!el) return;
@@ -536,39 +543,39 @@ function renderAlertsPagination() {
   const cur = state.alertsPage;
   let html = '';
 
-  html += `<button class="page-btn" ${cur===0?'disabled':''} onclick="loadAlerts(${cur-1})">‹</button>`;
+  html += `<button class="page-btn" ${cur===0?'disabled':''} onclick="loadAlerts(${cur-1})">&lt;</button>`;
   for (let i = Math.max(0, cur-2); i < Math.min(totalPages, cur+3); i++) {
     html += `<button class="page-btn ${i===cur?'active':''}" onclick="loadAlerts(${i})">${i+1}</button>`;
   }
-  html += `<button class="page-btn" ${cur>=totalPages-1?'disabled':''} onclick="loadAlerts(${cur+1})">›</button>`;
+  html += `<button class="page-btn" ${cur>=totalPages-1?'disabled':''} onclick="loadAlerts(${cur+1})">&gt;</button>`;
 
   el.innerHTML = html;
 }
 
-// ─── Entity Grid ──────────────────────────────────────────
+// Entity Grid ──────────────────────────────────────────
 function renderEntitiesGrid() {
   const grid = document.getElementById('entitiesGrid');
   if (!grid) return;
 
   if (!state.entities.length) {
-    grid.innerHTML = '<div class="empty-state"><div class="empty-state-icon">👤</div><div class="empty-state-text">No entities found</div></div>';
+    grid.innerHTML = '<div class="empty-state"><div class="empty-state-icon"></div><div class="empty-state-text">No entities found</div></div>';
     return;
   }
 
   grid.innerHTML = state.entities.map(e => {
     const rate = e.anomaly_rate || (e.anomaly_count / Math.max(e.total_events,1) * 100);
     const pct  = Math.min(rate/10*100, 100);
-    const icon = entityIcon(e.entity_type);
-    const initial = e.entity_id.charAt(0).toUpperCase();
     return `
       <div class="entity-card" onclick="openEntityDetail('${e.entity_id}')">
-        <div class="entity-header">
-          <div class="entity-avatar ${e.entity_type}">${icon}</div>
-          <div>
-            <div class="entity-id">${e.entity_id}</div>
-            <div class="entity-type-badge">${e.entity_type.replace(/_/g,' ')}</div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+          <div class="entity-avatar ${e.entity_type}">
+            ${entityIcon(e.entity_type)}
           </div>
-          ${e.anomaly_count > 5 ? '<span class="severity-badge CRITICAL" style="margin-left:auto">● HIGH RISK</span>' : ''}
+          <div style="flex:1;min-width:0">
+            <div class="entity-id">${e.entity_id}</div>
+            <div class="entity-type-badge">${e.entity_type.replace('_',' ')}</div>
+          </div>
+          ${e.anomaly_count > 5 ? '<span class="severity-badge CRITICAL" style="margin-left:auto">HIGH RISK</span>' : ''}
         </div>
         <div class="entity-stats">
           <div class="entity-stat-item">
@@ -595,7 +602,7 @@ function renderEntitiesGrid() {
   }).join('');
 }
 
-// ─── Detail Panel ─────────────────────────────────────────
+// Detail Panel ─────────────────────────────────────────
 let allAlertsCache = {};
 
 async function openDetail(alertId) {
@@ -640,6 +647,11 @@ async function openDetail(alertId) {
     </div>
   `).join('');
 
+  const ts = fmtTS(alert.timestamp);
+  const statusStr = alert.auth_success
+    ? '<span style="color:#4ade80">Success</span>'
+    : '<span style="color:#f87171">Failed</span>';
+
   document.getElementById('detailBody').innerHTML = `
     <!-- Risk Display -->
     <div class="detail-section">
@@ -655,7 +667,7 @@ async function openDetail(alertId) {
           <div class="risk-circle-num" style="color:${sevColor}">${riskPct}%</div>
         </div>
         <div>
-          <span class="severity-badge ${alert.severity}" style="font-size:0.75rem">● ${alert.severity}</span>
+          <span class="severity-badge ${alert.severity}" style="font-size:0.75rem">${alert.severity}</span>
           <div style="margin-top:8px">
             <span class="label-chip ${alert.predicted_label}">${alert.predicted_label.replace(/_/g,' ')}</span>
           </div>
@@ -668,7 +680,7 @@ async function openDetail(alertId) {
     <div class="detail-section">
       <div class="detail-section-title">Explanation</div>
       <div class="explanation-box">
-        <strong>🔍 Analysis: </strong>${alert.explanation_summary || 'No explanation available.'}
+        <strong>Analysis: </strong>${alert.explanation_summary || 'No explanation available.'}
       </div>
       ${factors ? `<div class="factor-list">${factors}</div>` : ''}
     </div>
@@ -693,7 +705,7 @@ async function openDetail(alertId) {
         </div>
         <div class="meta-item">
           <div class="meta-label">Timestamp</div>
-          <div class="meta-value mono">${fmtTS(alert.timestamp)}</div>
+          <div class="meta-value mono">${ts}</div>
         </div>
         <div class="meta-item">
           <div class="meta-label">Source IP</div>
@@ -710,8 +722,8 @@ async function openDetail(alertId) {
         <div class="meta-item">
           <div class="meta-label">Auth Success</div>
           <div class="meta-value">${alert.auth_success
-            ? '<span style="color:#4ade80">✓ Success</span>'
-            : '<span style="color:#f87171">✗ Failed</span>'}</div>
+            ? '<span style="color:#4ade80"> Success</span>'
+            : '<span style="color:#f87171"> Failed</span>'}</div>
         </div>
         <div class="meta-item">
           <div class="meta-label">Session Duration</div>
@@ -725,7 +737,7 @@ async function openDetail(alertId) {
           <div class="meta-label">Ground Truth</div>
           <div class="meta-value">
             <span class="label-chip ${alert.true_label}">${alert.true_label}</span>
-            ${alert.correct ? ' <span style="color:#4ade80;font-size:0.7rem">✓ correct</span>' : ' <span style="color:#f87171;font-size:0.7rem">✗ misclassified</span>'}
+            ${alert.correct ? ' <span style="color:#4ade80;font-size:0.7rem"> correct</span>' : ' <span style="color:#f87171;font-size:0.7rem"> misclassified</span>'}
           </div>
         </div>
       </div>
@@ -744,10 +756,10 @@ function closeDetail() {
   document.getElementById('detailPanel').classList.remove('open');
 }
 
-// ─── Live Scoring ─────────────────────────────────────────
+// Live Scoring ─────────────────────────────────────────
 async function scoreEvent() {
   const btn = document.getElementById('scoreBtn');
-  btn.textContent = '⏳ Scoring...';
+  btn.textContent = ' Scoring...';
   btn.disabled = true;
 
   const payload = {
@@ -797,7 +809,7 @@ async function scoreEvent() {
         <div style="font-size:2.5rem;font-weight:800;font-family:var(--font-mono);color:${sevColor}">${rPct}%</div>
       </div>
       <div>
-        <span class="severity-badge ${result.severity}" style="font-size:0.82rem;padding:6px 14px">● ${result.severity}</span>
+        <span class="severity-badge ${result.severity}" style="font-size:0.82rem;padding:6px 14px">${result.severity}</span>
         <div style="margin-top:8px"><span class="label-chip ${result.predicted_label}">${result.predicted_label.replace(/_/g,' ')}</span></div>
       </div>
       <div style="flex:1;min-width:200px">
@@ -813,7 +825,7 @@ async function scoreEvent() {
   resEl.classList.add('visible');
   resEl.style.borderColor = sevColor + '44';
 
-  btn.textContent = '⚡ Score Event';
+  btn.textContent = ' Score Event';
   btn.disabled = false;
 }
 
@@ -833,7 +845,7 @@ function loadScenario(scenario) {
   document.getElementById('sf-auth-method').value = s.auth_method;
 }
 
-// ─── Model Info Page ──────────────────────────────────────
+// Model Info Page ──────────────────────────────────────
 function renderModelPage() {
   const s = state.stats;
 
@@ -863,18 +875,17 @@ function renderModelPage() {
   const taxEl = document.getElementById('attackTaxonomy');
   if (taxEl) {
     const attacks = [
-      { label:'Brute Force', color:'#ef4444', type:'Anomaly', icon:'🔨' },
-      { label:'Impossible Travel', color:'#f97316', type:'Anomaly', icon:'✈️' },
-      { label:'Credential Stuffing', color:'#dc2626', type:'Anomaly', icon:'🔑' },
-      { label:'Lateral Movement', color:'#f97316', type:'Anomaly', icon:'↔️' },
-      { label:'Device Spoofing', color:'#eab308', type:'Anomaly', icon:'📱' },
-      { label:'Low & Slow Exfiltration', color:'#f59e0b', type:'Anomaly', icon:'🐢' },
-      { label:'Insider Drift', color:'#a855f7', type:'Edge Case', icon:'👤' },
-      { label:'Normal Baseline', color:'#22c55e', type:'Benign', icon:'✅' },
+      { label:'Brute Force', color:'#ef4444', type:'Anomaly' },
+      { label:'Impossible Travel', color:'#f97316', type:'Anomaly' },
+      { label:'Credential Stuffing', color:'#dc2626', type:'Anomaly' },
+      { label:'Lateral Movement', color:'#f97316', type:'Anomaly' },
+      { label:'Device Spoofing', color:'#eab308', type:'Anomaly' },
+      { label:'Low & Slow Exfiltration', color:'#f59e0b', type:'Anomaly' },
+      { label:'Insider Drift', color:'#a855f7', type:'Edge Case' },
+      { label:'Normal Baseline', color:'#22c55e', type:'Benign' },
     ];
     taxEl.innerHTML = attacks.map(a => `
       <div style="display:flex;align-items:center;gap:10px;padding:8px 10px;background:var(--bg-glass);border:1px solid var(--border);border-radius:6px">
-        <span style="font-size:0.9rem">${a.icon}</span>
         <div style="flex:1;font-size:0.8rem;font-weight:500">${a.label}</div>
         <span style="font-size:0.65rem;font-weight:700;padding:2px 8px;border-radius:100px;background:${a.color}22;color:${a.color};border:1px solid ${a.color}44">${a.type}</span>
       </div>
@@ -885,18 +896,17 @@ function renderModelPage() {
   const metricsEl = document.getElementById('metricsBody');
   if (metricsEl && s.weighted_f1) {
     const metrics = [
-      { label:'Weighted F1 Score', val: `${(s.weighted_f1*100).toFixed(2)}%`, color:'var(--accent-green)', icon:'🎯' },
-      { label:'Binary Precision', val: s.binary_precision ? `${(s.binary_precision*100).toFixed(2)}%` : '—', color:'var(--accent-blue)', icon:'📏' },
-      { label:'Binary Recall', val: s.binary_recall ? `${(s.binary_recall*100).toFixed(2)}%` : '—', color:'var(--accent-cyan)', icon:'🔍' },
-      { label:'FP Rate @Top-1%', val: s.fp_rate_top1pct != null ? `${s.fp_rate_top1pct}%` : '—', color:'var(--risk-medium)', icon:'⚡' },
-      { label:'Anomaly Rate', val: `${s.anomaly_rate_pct}%`, color:'var(--accent-purple)', icon:'📊' },
-      { label:'Total Events', val: fmtNum(s.total_events), color:'var(--text-secondary)', icon:'📋' },
+      { label:'Weighted F1 Score', val: `${(s.weighted_f1*100).toFixed(2)}%`, color:'var(--accent-green)' },
+      { label:'Binary Precision', val: s.binary_precision ? `${(s.binary_precision*100).toFixed(2)}%` : '—', color:'var(--accent-blue)' },
+      { label:'Binary Recall', val: s.binary_recall ? `${(s.binary_recall*100).toFixed(2)}%` : '—', color:'var(--accent-cyan)' },
+      { label:'FP Rate @Top-1%', val: s.fp_rate_top1pct != null ? `${s.fp_rate_top1pct}%` : '—', color:'var(--risk-medium)' },
+      { label:'Anomaly Rate', val: `${s.anomaly_rate_pct}%`, color:'var(--accent-purple)' },
+      { label:'Total Events', val: fmtNum(s.total_events), color:'var(--text-secondary)' },
     ];
     metricsEl.innerHTML = `
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
         ${metrics.map(m => `
           <div style="padding:16px;background:var(--bg-glass);border:1px solid var(--border);border-radius:10px">
-            <div style="font-size:1.1rem;margin-bottom:6px">${m.icon}</div>
             <div style="font-size:1.5rem;font-weight:800;color:${m.color};font-family:var(--font-mono)">${m.val}</div>
             <div style="font-size:0.72rem;color:var(--text-muted);margin-top:4px">${m.label}</div>
           </div>
@@ -906,7 +916,7 @@ function renderModelPage() {
   }
 }
 
-// ─── Page Navigation ──────────────────────────────────────
+// Page Navigation ──────────────────────────────────────
 function showPage(pageId) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
@@ -923,7 +933,7 @@ function showPage(pageId) {
   if (pageId === 'alerts')   loadAlerts();
 }
 
-// ─── Filters ──────────────────────────────────────────────
+// Filters 
 function clearFilters() {
   document.getElementById('filterSeverity').value = '';
   document.getElementById('filterLabel').value    = '';
@@ -942,14 +952,14 @@ function updateDashboard() {
   renderDashboard();
 }
 
-// ─── Loading ──────────────────────────────────────────────
+// Loading 
 function hideLoading() {
   const overlay = document.getElementById('loadingOverlay');
   overlay.classList.add('hidden');
   setTimeout(() => { overlay.style.display = 'none'; }, 600);
 }
 
-// ─── Helpers ──────────────────────────────────────────────
+// Helpers 
 function setText(id, val) {
   const el = document.getElementById(id);
   if (el) el.textContent = val;
@@ -986,5 +996,5 @@ function riskGradient(score) {
 }
 
 function entityIcon(type) {
-  return { user:'👤', service_account:'⚙️', edge_device:'📡' }[type] || '?';
+  return { user: 'USR', service_account: 'SVC', edge_device: 'DEV' }[type] || 'ENT';
 }
