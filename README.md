@@ -1,17 +1,17 @@
-# CyberSentinel — AI-Powered Behavioral Anomaly Detection
+# AegisIQ — AI/ML Based Behavioral Anomaly Detection
 
 A full-stack cybersecurity AI system that detects and classifies behavioral anomalies in access logs using sequence-aware ML models and an analyst-facing dashboard.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Raw Access Events
        │
        ▼
 ┌──────────────────────┐
-│  Synthetic Generator  │  ← NumPy + Faker, 8 attack patterns
+│  Synthetic Generator │  ← NumPy + Faker, 8 attack patterns
 └──────────┬───────────┘
            │
            ▼
@@ -42,24 +42,31 @@ Raw Access Events
 
 ---
 
-## 📦 Installation
+## Model Details
 
-```bash
-cd anomaly-detection
-pip install -r requirements.txt
-```
+### Baseline Profiler
+- Maintains per-entity counters: hour distribution, geo frequency, resource frequency, session duration stats, auth method, device fingerprints
+- Computes 7 deviation features per event
+- Falls back to global One-Class SVM (nu=0.05) for cold-start entities
 
-> **Note:** PyTorch CPU-only version is sufficient. If you have a GPU, the LSTM will use it automatically.
+### LSTM Autoencoder
+- Input: sliding window of 10 events × 34-dimensional feature vectors
+- Architecture: Encoder LSTM(128) → LSTM(64) | Decoder LSTM(64) → LSTM(128) → Linear(34)
+- Threshold: 95th percentile of reconstruction errors on normal training sequences
+- Training: 20 epochs, Adam optimizer, cosine LR schedule, gradient clipping
+
+### XGBoost Classifier
+- Features: 35 engineered (time, geo, resource, auth, rolling stats, baseline scores, LSTM error)
+- Classes: 8 (normal + 7 attack types)
+- Imbalance handling: SMOTE oversampling on training set
+- Explainability: SHAP TreeExplainer per alert
 
 ---
 
-## 🚀 Quick Start
-
-### Step 1 — Train all models
-```bash
+### Training all models
+```
 python train.py
 ```
-
 This will:
 1. Generate `~14,000` synthetic access events with 8 attack patterns
 2. Build per-entity behavioral profiles
@@ -76,19 +83,7 @@ Expected output:
   FP Rate @Top-1%  : <5%
 ```
 
-### Step 2 — Start the API
-```bash
-uvicorn api.main:app --reload --port 8000
-```
-
-### Step 3 — Open the Dashboard
-Open `dashboard/index.html` in your browser (no server needed).
-
-> The dashboard auto-connects to `http://localhost:8000`. If the API is offline, it falls back to demo data.
-
----
-
-## 🎯 Attack Taxonomy
+## Attack Taxonomy
 
 | Pattern | Type | Detection Signal |
 |---|---|---|
@@ -103,7 +98,7 @@ Open `dashboard/index.html` in your browser (no server needed).
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 | Method | Path | Description |
 |---|---|---|
@@ -118,10 +113,10 @@ Open `dashboard/index.html` in your browser (no server needed).
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-anomaly-detection/
+AegisIQ-1/
 ├── data/
 │   ├── generator.py          # Synthetic data generator
 │   ├── synthetic_logs.csv    # Generated dataset (after train.py)
@@ -143,12 +138,13 @@ anomaly-detection/
 │   └── app.js                # Dashboard logic
 ├── train.py                  # Full training pipeline
 ├── requirements.txt
+├── REPORT.md
 └── README.md
 ```
 
 ---
 
-## 📊 Evaluation Criteria
+## Evaluation Criteria
 
 | Criterion | Approach |
 |---|---|
@@ -162,28 +158,8 @@ anomaly-detection/
 
 ---
 
-## 🧠 Model Details
 
-### Baseline Profiler
-- Maintains per-entity counters: hour distribution, geo frequency, resource frequency, session duration stats, auth method, device fingerprints
-- Computes 7 deviation features per event
-- Falls back to global One-Class SVM (nu=0.05) for cold-start entities
-
-### LSTM Autoencoder
-- Input: sliding window of 10 events × 34-dimensional feature vectors
-- Architecture: Encoder LSTM(128) → LSTM(64) | Decoder LSTM(64) → LSTM(128) → Linear(34)
-- Threshold: 95th percentile of reconstruction errors on normal training sequences
-- Training: 20 epochs, Adam optimizer, cosine LR schedule, gradient clipping
-
-### XGBoost Classifier
-- Features: 35 engineered (time, geo, resource, auth, rolling stats, baseline scores, LSTM error)
-- Classes: 8 (normal + 7 attack types)
-- Imbalance handling: SMOTE oversampling on training set
-- Explainability: SHAP TreeExplainer per alert
-
----
-
-## 📝 Assumptions & Limitations
+## Assumptions & Limitations
 
 1. **Synthetic data**: Real-world distributions may differ; models should be re-trained on real logs
 2. **Static entity fingerprints**: In production, fingerprints should be versioned over time
