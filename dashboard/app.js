@@ -1,5 +1,5 @@
 
-const API_BASE = 'http://localhost:8000';
+const API_BASE = 'https://aegisiq-api.onrender.com';
 
 // State
 let state = {
