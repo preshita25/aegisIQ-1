@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AegisIQ — Enterprise Behavioral Anomaly Detection</title>
+  <meta name="description" content="AegisIQ — Enterprise AI-powered behavioral anomaly detection platform for SOC analysts. Real-time threat detection, anomaly classification, and explainable risk scoring.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════ LOADING ══ -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loading-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+  </div>
+  <div class="loading-text">Initializing AegisIQ...</div>
+  <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+</div>
+
+<!-- ═══════════════════════════════════════════ APP ═════ -->
+<div class="app-layout">
+
+  <!-- ── Topbar ── -->
+  <header class="topbar">
+    <div class="topbar-logo">
+      <div class="logo-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <span class="logo-text">AegisIQ</span>
+    </div>
+    <div class="topbar-divider"></div>
+    <div class="topbar-status" id="apiStatus">
+      <div class="status-dot"></div>
+      <span id="apiStatusText">Connecting...</span>
+    </div>
+    <div class="topbar-time" id="topbarTime">--:--:--</div>
+    <button class="topbar-btn" id="refreshBtn" onclick="refreshData()">Refresh</button>
+  </header>
+
+  <!-- ── Sidebar ── -->
+  <nav class="sidebar">
+    <div class="nav-section-label">Monitor</div>
+    <a class="nav-item active" id="nav-dashboard" onclick="showPage('dashboard')">
+      <span class="nav-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      </span>
+      Dashboard
+    </a>
+    <a class="nav-item" id="nav-alerts" onclick="showPage('alerts')">
+      <span class="nav-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+      </span>
+      Alert Queue
+      <span class="nav-badge" id="navAlertBadge">—</span>
+    </a>
+    <a class="nav-item" id="nav-entities" onclick="showPage('entities')">
+      <span class="nav-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </span>
+      Entities
+    </a>
+
+    <div class="nav-section-label" style="margin-top:8px">Investigate</div>
+    <a class="nav-item" id="nav-score" onclick="showPage('score')">
+      <span class="nav-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </span>
+      Live Score
+    </a>
+    <a class="nav-item" id="nav-model" onclick="showPage('model')">
+      <span class="nav-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+      </span>
+      Model Info
+    </a>
+  </nav>
+
+  <!-- ══════════════ MAIN CONTENT ══════════════ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- ─────────── PAGE: DASHBOARD ─────────── -->
+    <div class="page active" id="page-dashboard">
+
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Security Operations Center</h1>
+          <p class="page-subtitle">Real-time behavioral anomaly detection powered by AI</p>
+        </div>
+        <div class="page-actions">
+          <select class="filter-select" id="dashTimeFilter" onchange="updateDashboard()">
+            <option value="all">All Time</option>
+            <option value="7d">Last 7 Days</option>
+            <option value="24h">Last 24 Hours</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon" style="background-color:var(--red-10);color:var(--red-lt)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div class="kpi-value" id="kpiTotalAlerts">—</div>
+          <div class="kpi-label">Total Alerts</div>
+          <div class="kpi-delta delta-up" id="kpiAlertsDelta">Loading...</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon" style="background-color:var(--red-20);color:var(--red-lt)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="kpi-value" id="kpiCritical">—</div>
+          <div class="kpi-label">Critical Severity</div>
+          <div class="kpi-delta" id="kpiCriticalDelta">—</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon" style="background-color:var(--green-10);color:var(--green-lt)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="kpi-value" id="kpiF1">—</div>
+          <div class="kpi-label">Model Weighted F1</div>
+          <div class="kpi-delta delta-down">Detection accuracy</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon" style="background-color:var(--brand-10);color:var(--brand-lt)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="kpi-value" id="kpiEntities">—</div>
+          <div class="kpi-label">Monitored Entities</div>
+          <div class="kpi-delta delta-neutral">Users + Devices + Services</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon" style="background-color:rgba(129,140,248,0.10);color:#a5b4fc">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div class="kpi-value" id="kpiEvents">—</div>
+          <div class="kpi-label">Total Events</div>
+          <div class="kpi-delta delta-neutral">Across all entities</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon" style="background-color:var(--green-10);color:var(--green-lt)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="kpi-value" id="kpiFPRate">—</div>
+          <div class="kpi-label">FP Rate @Top-1%</div>
+          <div class="kpi-delta delta-down">Low false-positive rate</div>
+        </div>
+      </div>
+
+      <!-- Charts Row -->
+      <div class="charts-row">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Anomaly Type Distribution</div>
+          </div>
+          <div class="card-body">
+            <div class="chart-container" style="height:220px">
+              <canvas id="labelDistChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Risk Score Distribution</div>
+          </div>
+          <div class="card-body">
+            <div class="chart-container" style="height:220px">
+              <canvas id="riskDistChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Severity Breakdown + Top Entities -->
+      <div class="charts-row">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Severity Breakdown</div>
+          </div>
+          <div class="card-body">
+            <div class="chart-container" style="height:180px">
+              <canvas id="severityChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Top Risk Entities</div>
+          </div>
+          <div class="card-body" id="topEntitiesBody">
+            <div class="loading-text text-muted" style="font-size:0.8rem">Loading...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Alerts -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Recent Alerts</div>
+          <button class="btn-filter" onclick="showPage('alerts')">View All →</button>
+        </div>
+        <div class="alert-table-wrap">
+          <table class="alert-table" id="recentAlertsTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Entity</th>
+                <th>Timestamp</th>
+                <th>Type</th>
+                <th>Severity</th>
+                <th>Risk Score</th>
+                <th>Resource</th>
+              </tr>
+            </thead>
+            <tbody id="recentAlertsBody">
+              <tr><td colspan="7" class="text-muted" style="text-align:center;padding:32px">Loading alerts...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div><!-- /page-dashboard -->
+
+    <!-- ─────────── PAGE: ALERTS ─────────── -->
+    <div class="page" id="page-alerts">
+
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Alert Queue</h1>
+          <p class="page-subtitle" id="alertQueueSubtitle">Ranked by risk score · All severities</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="alert-filters">
+          <select class="filter-select" id="filterSeverity" onchange="loadAlerts()">
+            <option value="">All Severities</option>
+            <option value="CRITICAL">Critical</option>
+            <option value="HIGH">High</option>
+            <option value="MEDIUM">Medium</option>
+            <option value="LOW">Low</option>
+          </select>
+          <select class="filter-select" id="filterLabel" onchange="loadAlerts()">
+            <option value="">All Types</option>
+            <option value="brute_force">Brute Force</option>
+            <option value="impossible_travel">Impossible Travel</option>
+            <option value="credential_stuffing">Credential Stuffing</option>
+            <option value="lateral_movement">Lateral Movement</option>
+            <option value="device_spoofing">Device Spoofing</option>
+            <option value="low_and_slow">Low & Slow</option>
+            <option value="insider_drift">Insider Drift</option>
+          </select>
+          <select class="filter-select" id="filterSort" onchange="loadAlerts()">
+            <option value="risk_score">Sort: Risk Score</option>
+            <option value="timestamp">Sort: Timestamp</option>
+          </select>
+          <input type="text" class="filter-input" id="filterEntity"
+                 placeholder="Filter by entity ID..."
+                 oninput="debounceLoadAlerts()"
+                 style="min-width:180px">
+          <button class="btn-filter" onclick="clearFilters()">Clear</button>
+          <div style="margin-left:auto;font-size:0.75rem;color:var(--text-muted)" id="alertCount">— alerts</div>
+        </div>
+
+        <div class="alert-table-wrap">
+          <table class="alert-table">
+            <thead>
+              <tr>
+                <th>Alert ID</th>
+                <th>Entity</th>
+                <th>Timestamp</th>
+                <th>Attack Type</th>
+                <th>Severity</th>
+                <th>Risk Score</th>
+                <th>Geo</th>
+                <th>Resource</th>
+                <th>Auth</th>
+              </tr>
+            </thead>
+            <tbody id="alertsTableBody">
+              <tr><td colspan="9" class="text-muted" style="text-align:center;padding:40px">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination" id="alertsPagination"></div>
+      </div>
+
+    </div><!-- /page-alerts -->
+
+    <!-- ─────────── PAGE: ENTITIES ─────────── -->
+    <div class="page" id="page-entities">
+
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Entity Intelligence</h1>
+          <p class="page-subtitle">Monitored users, service accounts, and edge devices</p>
+        </div>
+        <div class="page-actions">
+          <select class="filter-select" id="entityTypeFilter" onchange="loadEntities()">
+            <option value="">All Types</option>
+            <option value="user">Users</option>
+            <option value="service_account">Service Accounts</option>
+            <option value="edge_device">Edge Devices</option>
+          </select>
+          <select class="filter-select" id="entitySortFilter" onchange="loadEntities()">
+            <option value="anomaly_count">Sort: Anomalies</option>
+            <option value="total_events">Sort: Activity</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="entities-grid" id="entitiesGrid">
+        <div class="text-muted" style="padding:40px">Loading entities...</div>
+      </div>
+
+    </div><!-- /page-entities -->
+
+    <!-- ─────────── PAGE: LIVE SCORE ─────────── -->
+    <div class="page" id="page-score">
+
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Live Event Scoring</h1>
+          <p class="page-subtitle">Submit an access event for real-time risk assessment</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Score an Event</div>
+        </div>
+        <div class="card-body">
+          <div class="score-form" id="scoreForm">
+            <div class="form-group">
+              <label class="form-label">Entity ID</label>
+              <input class="form-input" id="sf-entity-id" type="text" value="user_0001" placeholder="user_0001">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Entity Type</label>
+              <select class="form-select" id="sf-entity-type">
+                <option value="user">User</option>
+                <option value="service_account">Service Account</option>
+                <option value="edge_device">Edge Device</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Geo Location</label>
+              <select class="form-select" id="sf-geo">
+                <option>US-NY</option><option>US-CA</option><option>US-TX</option>
+                <option>UK-LDN</option><option>DE-BER</option><option>IN-MUM</option>
+                <option>SG-SGP</option><option>AU-SYD</option><option>BR-SAO</option>
+                <option>JP-TYO</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Resource Accessed</label>
+              <select class="form-select" id="sf-resource">
+                <option>/api/v1/users</option>
+                <option>/api/v1/orders</option>
+                <option>/api/v1/payments</option>
+                <option>/api/v1/reports</option>
+                <option>/admin/config</option>
+                <option>/admin/users</option>
+                <option>/internal/secrets</option>
+                <option>/internal/keys</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Auth Method</label>
+              <select class="form-select" id="sf-auth-method">
+                <option>password</option>
+                <option>token</option>
+                <option>certificate</option>
+                <option>biometric</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Auth Success</label>
+              <select class="form-select" id="sf-auth-success">
+                <option value="true">Success</option>
+                <option value="false">Failed</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Session Duration (min)</label>
+              <input class="form-input" id="sf-session-dur" type="number" value="12" min="0" max="480">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Source IP</label>
+              <input class="form-input" id="sf-source-ip" type="text" value="192.168.1.100" placeholder="192.168.1.1">
+            </div>
+            <button class="btn-score" id="scoreBtn" onclick="scoreEvent()">
+              Score Event
+            </button>
+          </div>
+
+          <div class="score-result" id="scoreResult">
+            <div id="scoreResultContent"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick test scenarios -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Quick Test Scenarios</div>
+        </div>
+        <div class="card-body">
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn-filter active" onclick="loadScenario('brute')">Brute Force</button>
+            <button class="btn-filter" onclick="loadScenario('lateral')">Lateral Movement</button>
+            <button class="btn-filter" onclick="loadScenario('offhours')">Off-Hours Access</button>
+            <button class="btn-filter" onclick="loadScenario('normal')">Normal Baseline</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /page-score -->
+
+    <!-- ─────────── PAGE: MODEL INFO ─────────── -->
+    <div class="page" id="page-model">
+
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Model Architecture</h1>
+          <p class="page-subtitle">AI system design and performance metrics</p>
+        </div>
+      </div>
+
+      <div class="charts-row">
+        <div class="card">
+          <div class="card-header"><div class="card-title">System Architecture</div></div>
+          <div class="card-body">
+            <div style="display:flex;flex-direction:column;gap:12px" id="archDiagram">
+              <!-- filled by JS -->
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"><div class="card-title">Attack Taxonomy</div></div>
+          <div class="card-body">
+            <div style="display:flex;flex-direction:column;gap:8px" id="attackTaxonomy">
+              <!-- filled by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><div class="card-title">Performance Metrics</div></div>
+        <div class="card-body" id="metricsBody">
+          <div class="text-muted">Loading metrics...</div>
+        </div>
+      </div>
+
+    </div><!-- /page-model -->
+
+  </main><!-- /main-content -->
+</div><!-- /app-layout -->
+
+<!-- ═══════════════ ALERT DETAIL PANEL ═══════════════ -->
+<aside class="detail-panel" id="detailPanel">
+  <div class="detail-header">
+    <div>
+      <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px">Alert Detail</div>
+      <div style="font-size:0.9rem;font-weight:700" id="detailAlertId">—</div>
+    </div>
+    <button class="detail-close" id="detailClose" onclick="closeDetail()">✕</button>
+  </div>
+  <div class="detail-body" id="detailBody">
+    <!-- filled by JS -->
+  </div>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>

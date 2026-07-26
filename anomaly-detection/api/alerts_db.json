@@ -1,0 +1,4101 @@
+[
+  {
+    "id": "ALT-002180",
+    "timestamp": "2024-02-27 00:03:44",
+    "entity_id": "user_0011",
+    "entity_type": "user",
+    "geo_location": "US-NY",
+    "resource_accessed": "/admin/config",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.76,
+    "source_ip": "21.209.40.12",
+    "risk_score": 1.0,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 6.956960532988887e-06,
+      "credential_stuffing": 0.999922513961792,
+      "device_spoofing": 7.999145964276977e-06,
+      "impossible_travel": 1.1409064200051944e-06,
+      "insider_drift": 1.5353439266618807e-06,
+      "lateral_movement": 2.3381544451694936e-06,
+      "low_and_slow": 1.2336428881098982e-05,
+      "normal": 4.516572516877204e-05
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05541658401489258,
+        "value": 0.0554,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001035",
+    "timestamp": "2024-02-22 04:20:00",
+    "entity_id": "user_0023",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/export",
+    "auth_method": "password",
+    "auth_success": true,
+    "session_duration": 18.76,
+    "source_ip": "172.214.174.41",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 2.25440430767776e-06,
+      "credential_stuffing": 1.3560621709984844e-06,
+      "device_spoofing": 5.996291292831302e-06,
+      "impossible_travel": 1.352456911263289e-05,
+      "insider_drift": 2.510491185603314e-06,
+      "lateral_movement": 0.9998186230659485,
+      "low_and_slow": 5.785696885141078e-06,
+      "normal": 0.00014997734979260713
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0680807333232628,
+        "value": 0.0681,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-001037",
+    "timestamp": "2024-02-22 04:28:00",
+    "entity_id": "user_0023",
+    "entity_type": "user",
+    "geo_location": "AU-SYD",
+    "resource_accessed": "/admin/config",
+    "auth_method": "password",
+    "auth_success": true,
+    "session_duration": 17.98,
+    "source_ip": "84.140.68.145",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 2.166576450690627e-06,
+      "credential_stuffing": 1.30323087432771e-06,
+      "device_spoofing": 4.28807925345609e-06,
+      "impossible_travel": 1.351215541944839e-05,
+      "insider_drift": 2.3691411570325727e-06,
+      "lateral_movement": 0.9998921155929565,
+      "low_and_slow": 7.4592749115254264e-06,
+      "normal": 7.675377855775878e-05
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0680807333232628,
+        "value": 0.0681,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-002145",
+    "timestamp": "2024-02-26 21:00:16",
+    "entity_id": "user_0066",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.21,
+    "source_ip": "218.57.198.125",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9990381002426147,
+      "credential_stuffing": 0.0006871586665511131,
+      "device_spoofing": 7.427951641147956e-05,
+      "impossible_travel": 6.1675473261857405e-06,
+      "insider_drift": 2.537766931709484e-06,
+      "lateral_movement": 3.0097437502263347e-06,
+      "low_and_slow": 5.5470252846134827e-05,
+      "normal": 0.0001333108521066606
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.055515383858056294,
+        "value": 0.0555,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002146",
+    "timestamp": "2024-02-26 21:00:24",
+    "entity_id": "user_0066",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.3,
+    "source_ip": "218.57.198.125",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9990725517272949,
+      "credential_stuffing": 0.0006968891830183566,
+      "device_spoofing": 7.533135067205876e-05,
+      "impossible_travel": 6.2548833739128895e-06,
+      "insider_drift": 2.5737031137396116e-06,
+      "lateral_movement": 3.052363126698765e-06,
+      "low_and_slow": 5.625573976431042e-05,
+      "normal": 8.712278213351965e-05
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.055515383858056294,
+        "value": 0.0555,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002147",
+    "timestamp": "2024-02-26 21:00:35",
+    "entity_id": "user_0066",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.32,
+    "source_ip": "218.57.198.125",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9991083741188049,
+      "credential_stuffing": 0.0006699365912936628,
+      "device_spoofing": 7.241786806844175e-05,
+      "impossible_travel": 6.012965513946256e-06,
+      "insider_drift": 2.4741634661040734e-06,
+      "lateral_movement": 2.9343111691559898e-06,
+      "low_and_slow": 5.408001015894115e-05,
+      "normal": 8.375325705856085e-05
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.055515383858056294,
+        "value": 0.0555,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002148",
+    "timestamp": "2024-02-26 21:00:40",
+    "entity_id": "user_0066",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.41,
+    "source_ip": "218.57.198.125",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9991381168365479,
+      "credential_stuffing": 0.0006476081907749176,
+      "device_spoofing": 7.000424375291914e-05,
+      "impossible_travel": 5.8125642681261525e-06,
+      "insider_drift": 2.391701627857401e-06,
+      "lateral_movement": 2.836513203874347e-06,
+      "low_and_slow": 5.227757355896756e-05,
+      "normal": 8.096183591987938e-05
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.055515383858056294,
+        "value": 0.0555,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002149",
+    "timestamp": "2024-02-26 21:00:56",
+    "entity_id": "user_0066",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.14,
+    "source_ip": "218.57.198.125",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9991540908813477,
+      "credential_stuffing": 0.000638483208604157,
+      "device_spoofing": 6.512602703878656e-05,
+      "impossible_travel": 5.730661541747395e-06,
+      "insider_drift": 2.3580009838042315e-06,
+      "lateral_movement": 2.796544777083909e-06,
+      "low_and_slow": 5.15409919898957e-05,
+      "normal": 7.982102397363633e-05
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.055515383858056294,
+        "value": 0.0555,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002150",
+    "timestamp": "2024-02-26 21:01:30",
+    "entity_id": "user_0066",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.29,
+    "source_ip": "218.57.198.125",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9991382360458374,
+      "credential_stuffing": 0.0006474918336607516,
+      "device_spoofing": 6.999163451837376e-05,
+      "impossible_travel": 5.811517894471763e-06,
+      "insider_drift": 2.3912709821161116e-06,
+      "lateral_movement": 2.836002295225626e-06,
+      "low_and_slow": 5.22682057635393e-05,
+      "normal": 8.094725490082055e-05
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.055515383858056294,
+        "value": 0.0555,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002160",
+    "timestamp": "2024-02-27 00:00:00",
+    "entity_id": "user_0075",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "password",
+    "auth_success": false,
+    "session_duration": 0.13,
+    "source_ip": "218.140.15.39",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 1.57957365445327e-05,
+      "credential_stuffing": 0.9998430013656616,
+      "device_spoofing": 4.774102308147121e-06,
+      "impossible_travel": 1.3247471315480652e-06,
+      "insider_drift": 8.275883942587825e-07,
+      "lateral_movement": 1.5094612990651513e-06,
+      "low_and_slow": 1.0466672392794862e-05,
+      "normal": 0.00012227641127537936
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.05).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.04758657271472307,
+        "value": 0.0476,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002161",
+    "timestamp": "2024-02-27 00:00:28",
+    "entity_id": "user_0055",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/inventory",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.46,
+    "source_ip": "218.140.15.39",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 1.6661690096952952e-05,
+      "credential_stuffing": 0.9998884201049805,
+      "device_spoofing": 3.264146926085232e-06,
+      "impossible_travel": 1.4971885775594274e-06,
+      "insider_drift": 1.3193730410421267e-06,
+      "lateral_movement": 3.24914617522154e-06,
+      "low_and_slow": 1.564949343446642e-05,
+      "normal": 6.99155789334327e-05
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.07236848622560502,
+        "value": 0.0724,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002162",
+    "timestamp": "2024-02-27 00:00:30",
+    "entity_id": "user_0009",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/logs",
+    "auth_method": "password",
+    "auth_success": false,
+    "session_duration": 0.6,
+    "source_ip": "21.209.40.12",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 6.774375833629165e-06,
+      "credential_stuffing": 0.9998908042907715,
+      "device_spoofing": 4.343571163190063e-06,
+      "impossible_travel": 1.448205807719205e-06,
+      "insider_drift": 1.3272801879793406e-06,
+      "lateral_movement": 1.6363983377232216e-06,
+      "low_and_slow": 1.687254371063318e-05,
+      "normal": 7.681049464736134e-05
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.06430862275393386,
+        "value": 0.0643,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002163",
+    "timestamp": "2024-02-27 00:00:45",
+    "entity_id": "svc_0082",
+    "entity_type": "service_account",
+    "geo_location": "UK-LDN",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.77,
+    "source_ip": "21.209.40.12",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 6.494682565971743e-06,
+      "credential_stuffing": 0.9998492002487183,
+      "device_spoofing": 3.484511580609251e-06,
+      "impossible_travel": 1.089198576664785e-06,
+      "insider_drift": 8.253267083091487e-07,
+      "lateral_movement": 3.6095302675676066e-06,
+      "low_and_slow": 4.479119979805546e-06,
+      "normal": 0.00013074024172965437
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.04).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.03569253321204867,
+        "value": 0.0357,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002164",
+    "timestamp": "2024-02-27 00:01:00",
+    "entity_id": "user_0069",
+    "entity_type": "user",
+    "geo_location": "SG-SGP",
+    "resource_accessed": "/admin/config",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.32,
+    "source_ip": "21.209.40.12",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 1.5184337826212868e-05,
+      "credential_stuffing": 0.9998867511749268,
+      "device_spoofing": 2.5876927338686073e-06,
+      "impossible_travel": 3.230595893910504e-06,
+      "insider_drift": 8.134347808663733e-07,
+      "lateral_movement": 1.6048742281782324e-06,
+      "low_and_slow": 1.2694868019025307e-05,
+      "normal": 7.710720819886774e-05
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0663910162448883,
+        "value": 0.0664,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002168",
+    "timestamp": "2024-02-27 00:01:36",
+    "entity_id": "dev_0106",
+    "entity_type": "edge_device",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/reports",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.69,
+    "source_ip": "218.140.15.39",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 7.336383077927167e-06,
+      "credential_stuffing": 0.9999004602432251,
+      "device_spoofing": 6.665331511612749e-06,
+      "impossible_travel": 1.1134085298181162e-06,
+      "insider_drift": 1.2572754712891765e-06,
+      "lateral_movement": 3.6021599498781143e-06,
+      "low_and_slow": 3.0557434911315795e-06,
+      "normal": 7.653287320863456e-05
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.04).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.03605938314770659,
+        "value": 0.0361,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002170",
+    "timestamp": "2024-02-27 00:02:16",
+    "entity_id": "user_0049",
+    "entity_type": "user",
+    "geo_location": "US-TX",
+    "resource_accessed": "/api/v1/logs",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.91,
+    "source_ip": "218.140.15.39",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 6.8027666202397086e-06,
+      "credential_stuffing": 0.9998862743377686,
+      "device_spoofing": 1.9757098925765604e-06,
+      "impossible_travel": 1.2546537391244783e-06,
+      "insider_drift": 7.776723123242846e-07,
+      "lateral_movement": 3.6039607493876247e-06,
+      "low_and_slow": 2.030886389547959e-05,
+      "normal": 7.899505726527423e-05
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.07374806888401508,
+        "value": 0.0737,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002173",
+    "timestamp": "2024-02-27 00:02:40",
+    "entity_id": "dev_0114",
+    "entity_type": "edge_device",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/admin/config",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.18,
+    "source_ip": "218.140.15.39",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 1.689016426098533e-05,
+      "credential_stuffing": 0.999902606010437,
+      "device_spoofing": 1.9160464944434352e-05,
+      "impossible_travel": 1.4130324643701897e-06,
+      "insider_drift": 8.029830382838554e-07,
+      "lateral_movement": 1.706130547063367e-06,
+      "low_and_slow": 2.6918671665043803e-06,
+      "normal": 5.469037205330096e-05
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.04).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.04013113956898451,
+        "value": 0.0401,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002176",
+    "timestamp": "2024-02-27 00:03:10",
+    "entity_id": "user_0034",
+    "entity_type": "user",
+    "geo_location": "AU-SYD",
+    "resource_accessed": "/api/v1/logs",
+    "auth_method": "password",
+    "auth_success": false,
+    "session_duration": 0.6,
+    "source_ip": "218.140.15.39",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 6.756831226084614e-06,
+      "credential_stuffing": 0.99989914894104,
+      "device_spoofing": 4.080371581949294e-06,
+      "impossible_travel": 1.3066998008071096e-06,
+      "insider_drift": 8.276348921754106e-07,
+      "lateral_movement": 1.5095461094460916e-06,
+      "low_and_slow": 1.2636623978323769e-05,
+      "normal": 7.37060618121177e-05
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.05).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.048888314981013536,
+        "value": 0.0489,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002177",
+    "timestamp": "2024-02-27 00:03:12",
+    "entity_id": "svc_0089",
+    "entity_type": "service_account",
+    "geo_location": "JP-TYO",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.69,
+    "source_ip": "21.209.40.12",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 6.866995136078913e-06,
+      "credential_stuffing": 0.9998650550842285,
+      "device_spoofing": 1.4304106116469484e-05,
+      "impossible_travel": 1.1275917586317519e-06,
+      "insider_drift": 1.3454267673296272e-06,
+      "lateral_movement": 1.5810891227374668e-06,
+      "low_and_slow": 1.9160441297572106e-05,
+      "normal": 9.055668488144875e-05
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05641408119764593,
+        "value": 0.0564,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002179",
+    "timestamp": "2024-02-27 00:03:40",
+    "entity_id": "user_0021",
+    "entity_type": "user",
+    "geo_location": "US-CA",
+    "resource_accessed": "/api/v1/orders",
+    "auth_method": "password",
+    "auth_success": false,
+    "session_duration": 1.0,
+    "source_ip": "218.140.15.39",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 1.4174042007653043e-05,
+      "credential_stuffing": 0.9997783303260803,
+      "device_spoofing": 4.6201325858419295e-06,
+      "impossible_travel": 2.9072944016661495e-06,
+      "insider_drift": 1.9403917121962877e-06,
+      "lateral_movement": 4.182258180662757e-06,
+      "low_and_slow": 6.334380304906517e-05,
+      "normal": 0.00013047266111243516
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.05).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.054763711988925934,
+        "value": 0.0548,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002181",
+    "timestamp": "2024-02-27 00:04:30",
+    "entity_id": "svc_0081",
+    "entity_type": "service_account",
+    "geo_location": "JP-TYO",
+    "resource_accessed": "/internal/secrets",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.8,
+    "source_ip": "21.209.40.12",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 6.943081643839832e-06,
+      "credential_stuffing": 0.9998387098312378,
+      "device_spoofing": 3.5171149647794664e-05,
+      "impossible_travel": 1.3284925444168039e-06,
+      "insider_drift": 1.3468162478602608e-06,
+      "lateral_movement": 1.7074866036637104e-06,
+      "low_and_slow": 2.512862693038187e-06,
+      "normal": 0.00011225963680772111
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.04).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.04382937386631966,
+        "value": 0.0438,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002182",
+    "timestamp": "2024-02-27 00:04:33",
+    "entity_id": "user_0067",
+    "entity_type": "user",
+    "geo_location": "AU-SYD",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "password",
+    "auth_success": false,
+    "session_duration": 0.82,
+    "source_ip": "21.209.40.12",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 6.756491075066151e-06,
+      "credential_stuffing": 0.9998488426208496,
+      "device_spoofing": 5.7573706726543605e-06,
+      "impossible_travel": 1.2920075960209942e-06,
+      "insider_drift": 8.275932259493857e-07,
+      "lateral_movement": 1.658367864365573e-06,
+      "low_and_slow": 1.0466733328939881e-05,
+      "normal": 0.0001244252489414066
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.04).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.044240170291491916,
+        "value": 0.0442,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002184",
+    "timestamp": "2024-02-27 00:07:12",
+    "entity_id": "dev_0108",
+    "entity_type": "edge_device",
+    "geo_location": "JP-TYO",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.85,
+    "source_ip": "218.140.15.39",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 1.007264836516697e-05,
+      "credential_stuffing": 0.9998329877853394,
+      "device_spoofing": 5.454479105537757e-05,
+      "impossible_travel": 1.6784449599072104e-06,
+      "insider_drift": 1.8353069890508777e-06,
+      "lateral_movement": 4.6912668949516956e-06,
+      "low_and_slow": 4.290390279493295e-06,
+      "normal": 8.991346112452447e-05
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.04).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.03795438607533773,
+        "value": 0.038,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002185",
+    "timestamp": "2024-02-27 00:07:40",
+    "entity_id": "user_0002",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/admin/config",
+    "auth_method": "password",
+    "auth_success": false,
+    "session_duration": 0.22,
+    "source_ip": "218.140.15.39",
+    "risk_score": 0.9999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 1.5595887816743925e-05,
+      "credential_stuffing": 0.9998675584793091,
+      "device_spoofing": 3.2085622478916775e-06,
+      "impossible_travel": 1.7636888287597685e-06,
+      "insider_drift": 8.499054615640489e-07,
+      "lateral_movement": 1.6048434190452099e-06,
+      "low_and_slow": 1.7764328731573187e-05,
+      "normal": 9.166029485641047e-05
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.06322798207402229,
+        "value": 0.0632,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001033",
+    "timestamp": "2024-02-22 04:12:00",
+    "entity_id": "user_0023",
+    "entity_type": "user",
+    "geo_location": "AU-SYD",
+    "resource_accessed": "/api/v1/orders",
+    "auth_method": "password",
+    "auth_success": true,
+    "session_duration": 13.0,
+    "source_ip": "1.82.247.83",
+    "risk_score": 0.9998,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 1.933015482791234e-06,
+      "credential_stuffing": 1.2000900824205019e-06,
+      "device_spoofing": 3.0007761324668536e-06,
+      "impossible_travel": 2.7393891741667176e-06,
+      "insider_drift": 1.8366201857134001e-06,
+      "lateral_movement": 0.9998149275779724,
+      "low_and_slow": 4.312665168981766e-06,
+      "normal": 0.00017007843416649848
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0680807333232628,
+        "value": 0.0681,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-001036",
+    "timestamp": "2024-02-22 04:24:00",
+    "entity_id": "user_0023",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/internal/secrets",
+    "auth_method": "password",
+    "auth_success": true,
+    "session_duration": 11.8,
+    "source_ip": "196.254.40.98",
+    "risk_score": 0.9998,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 2.1839500732312445e-06,
+      "credential_stuffing": 1.3136815368852695e-06,
+      "device_spoofing": 7.185599770309636e-06,
+      "impossible_travel": 1.1192370038770605e-05,
+      "insider_drift": 1.53987070916628e-06,
+      "lateral_movement": 0.9998053908348083,
+      "low_and_slow": 4.522773451753892e-06,
+      "normal": 0.0001666889584157616
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0680807333232628,
+        "value": 0.0681,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-002165",
+    "timestamp": "2024-02-27 00:01:00",
+    "entity_id": "dev_0119",
+    "entity_type": "edge_device",
+    "geo_location": "UK-LDN",
+    "resource_accessed": "/api/v1/reports",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.72,
+    "source_ip": "218.140.15.39",
+    "risk_score": 0.9998,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 1.5666151739424095e-05,
+      "credential_stuffing": 0.9997525811195374,
+      "device_spoofing": 7.452943918906385e-06,
+      "impossible_travel": 2.2721828827343415e-06,
+      "insider_drift": 2.9038390039204387e-06,
+      "lateral_movement": 8.708323548489716e-06,
+      "low_and_slow": 6.419284545700066e-06,
+      "normal": 0.00020403391681611538
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.04).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.03541358997640402,
+        "value": 0.0354,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002171",
+    "timestamp": "2024-02-27 00:02:20",
+    "entity_id": "svc_0090",
+    "entity_type": "service_account",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/reports",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.56,
+    "source_ip": "21.209.40.12",
+    "risk_score": 0.9998,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 1.5113938388822135e-05,
+      "credential_stuffing": 0.9997181296348572,
+      "device_spoofing": 4.864796210313216e-06,
+      "impossible_travel": 2.8287372515478637e-06,
+      "insider_drift": 1.8384454278930207e-06,
+      "lateral_movement": 3.727685452759033e-06,
+      "low_and_slow": 8.872430771589279e-05,
+      "normal": 0.00016474392032250762
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.060910890344530344,
+        "value": 0.0609,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002144",
+    "timestamp": "2024-02-26 21:00:02",
+    "entity_id": "user_0066",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.39,
+    "source_ip": "218.57.198.125",
+    "risk_score": 0.9997,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9980819225311279,
+      "credential_stuffing": 0.001369393547065556,
+      "device_spoofing": 0.00014802678197156638,
+      "impossible_travel": 1.234313822351396e-05,
+      "insider_drift": 5.057349881099071e-06,
+      "lateral_movement": 5.956786480965093e-06,
+      "low_and_slow": 0.00011054303467972204,
+      "normal": 0.00026671335217542946
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.055515383858056294,
+        "value": 0.0555,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001466",
+    "timestamp": "2024-02-24 02:32:00",
+    "entity_id": "user_0069",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/orders",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 9.21,
+    "source_ip": "12.52.89.0",
+    "risk_score": 0.9996,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 3.999637556262314e-06,
+      "credential_stuffing": 2.075641759802238e-06,
+      "device_spoofing": 8.148660526785534e-06,
+      "impossible_travel": 3.37770652549807e-05,
+      "insider_drift": 1.8997126289832522e-06,
+      "lateral_movement": 0.9994557499885559,
+      "low_and_slow": 4.922742664348334e-05,
+      "normal": 0.0004451776621863246
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0663910162448883,
+        "value": 0.0664,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-001467",
+    "timestamp": "2024-02-24 02:50:00",
+    "entity_id": "user_0069",
+    "entity_type": "user",
+    "geo_location": "SG-SGP",
+    "resource_accessed": "/admin/users",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 9.65,
+    "source_ip": "135.50.14.127",
+    "risk_score": 0.9996,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 3.955884039896773e-06,
+      "credential_stuffing": 2.0917996153002605e-06,
+      "device_spoofing": 7.16003933121101e-06,
+      "impossible_travel": 3.5026256227865815e-05,
+      "insider_drift": 1.9145008991472423e-06,
+      "lateral_movement": 0.999498724937439,
+      "low_and_slow": 3.051771636819467e-05,
+      "normal": 0.00042060602572746575
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0663910162448883,
+        "value": 0.0664,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-001462",
+    "timestamp": "2024-02-24 02:15:00",
+    "entity_id": "user_0069",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/logs",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 10.89,
+    "source_ip": "200.61.118.191",
+    "risk_score": 0.9995,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 4.04581487600808e-06,
+      "credential_stuffing": 2.075607881124597e-06,
+      "device_spoofing": 6.214830591488862e-06,
+      "impossible_travel": 3.476282290648669e-05,
+      "insider_drift": 2.314372977707535e-06,
+      "lateral_movement": 0.9994394183158875,
+      "low_and_slow": 1.9353499737917446e-05,
+      "normal": 0.0004918315098620951
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0663910162448883,
+        "value": 0.0664,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-001463",
+    "timestamp": "2024-02-24 02:18:00",
+    "entity_id": "user_0069",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 16.02,
+    "source_ip": "217.41.243.97",
+    "risk_score": 0.9995,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 4.046486083097989e-06,
+      "credential_stuffing": 2.0756158392032376e-06,
+      "device_spoofing": 4.735733000416076e-06,
+      "impossible_travel": 3.3373042242601514e-05,
+      "insider_drift": 1.9577423699956853e-06,
+      "lateral_movement": 0.9994432330131531,
+      "low_and_slow": 4.6651079173898324e-05,
+      "normal": 0.00046389084309339523
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0663910162448883,
+        "value": 0.0664,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-001461",
+    "timestamp": "2024-02-24 02:12:00",
+    "entity_id": "user_0069",
+    "entity_type": "user",
+    "geo_location": "SG-SGP",
+    "resource_accessed": "/api/v1/export",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 13.49,
+    "source_ip": "208.65.77.135",
+    "risk_score": 0.9994,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 4.039316081616562e-06,
+      "credential_stuffing": 2.1120777091709897e-06,
+      "device_spoofing": 9.545886314299423e-06,
+      "impossible_travel": 3.8131467590574175e-05,
+      "insider_drift": 2.461115855112439e-06,
+      "lateral_movement": 0.999290943145752,
+      "low_and_slow": 1.8858632756746374e-05,
+      "normal": 0.0006338460952974856
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0663910162448883,
+        "value": 0.0664,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-002178",
+    "timestamp": "2024-02-27 00:03:23",
+    "entity_id": "user_0023",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/inventory",
+    "auth_method": "password",
+    "auth_success": true,
+    "session_duration": 0.84,
+    "source_ip": "21.209.40.12",
+    "risk_score": 0.9994,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 7.434103281411808e-06,
+      "credential_stuffing": 0.9990109205245972,
+      "device_spoofing": 2.2009971871739253e-05,
+      "impossible_travel": 1.165448975370964e-05,
+      "insider_drift": 2.51070705417078e-05,
+      "lateral_movement": 2.505681368347723e-05,
+      "low_and_slow": 0.0003000279830303043,
+      "normal": 0.0005977641558274627
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0680807333232628,
+        "value": 0.0681,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002167",
+    "timestamp": "2024-02-27 00:01:06",
+    "entity_id": "user_0026",
+    "entity_type": "user",
+    "geo_location": "JP-TYO",
+    "resource_accessed": "/api/v1/orders",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 0.1,
+    "source_ip": "218.140.15.39",
+    "risk_score": 0.9991,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 2.7903379304916598e-05,
+      "credential_stuffing": 0.9987898468971252,
+      "device_spoofing": 0.0001248690823558718,
+      "impossible_travel": 1.0090083378599957e-05,
+      "insider_drift": 6.470246717071859e-06,
+      "lateral_movement": 1.1802444532804657e-05,
+      "low_and_slow": 8.495863585267216e-05,
+      "normal": 0.0009440627763979137
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.05).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.046462737023830414,
+        "value": 0.0465,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002175",
+    "timestamp": "2024-02-27 00:03:00",
+    "entity_id": "user_0078",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/reports",
+    "auth_method": "certificate",
+    "auth_success": true,
+    "session_duration": 0.25,
+    "source_ip": "21.209.40.12",
+    "risk_score": 0.9991,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 1.99394653463969e-05,
+      "credential_stuffing": 0.9985054731369019,
+      "device_spoofing": 0.00010956410551443696,
+      "impossible_travel": 9.624512131267693e-06,
+      "insider_drift": 2.1093843315611593e-05,
+      "lateral_movement": 1.4512926099996548e-05,
+      "low_and_slow": 0.00039221433689817786,
+      "normal": 0.0009275897755287588
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.05).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05470316049953302,
+        "value": 0.0547,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002166",
+    "timestamp": "2024-02-27 00:01:04",
+    "entity_id": "user_0030",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 0.83,
+    "source_ip": "218.140.15.39",
+    "risk_score": 0.999,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 7.634238500031643e-06,
+      "credential_stuffing": 0.9971944093704224,
+      "device_spoofing": 2.5463215933996253e-05,
+      "impossible_travel": 1.543553480587434e-05,
+      "insider_drift": 6.645904704782879e-06,
+      "lateral_movement": 1.2284986041777302e-05,
+      "low_and_slow": 0.0016994235338643193,
+      "normal": 0.001038735150359571
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05815251065152032,
+        "value": 0.0582,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-000500",
+    "timestamp": "2024-02-19 17:00:00",
+    "entity_id": "user_0043",
+    "entity_type": "user",
+    "geo_location": "UK-LDN",
+    "resource_accessed": "/api/v1/orders",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 20.36,
+    "source_ip": "104.23.90.189",
+    "risk_score": 0.9989,
+    "severity": "CRITICAL",
+    "predicted_label": "impossible_travel",
+    "true_label": "impossible_travel",
+    "class_probabilities": {
+      "brute_force": 4.2244555515935645e-06,
+      "credential_stuffing": 4.439587883098284e-06,
+      "device_spoofing": 2.4662249415996484e-05,
+      "impossible_travel": 0.998866081237793,
+      "insider_drift": 6.176915121614002e-06,
+      "lateral_movement": 4.737545623356709e-06,
+      "low_and_slow": 1.046854868036462e-05,
+      "normal": 0.001079178531654179
+    },
+    "explanation_summary": "Flagged due to: Unusual location (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_geo_anomaly",
+        "label": "Unusual location (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05815704166889191,
+        "value": 0.0582,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Impossible travel \u2014 logins from geographically distant locations within an implausible time window.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-001032",
+    "timestamp": "2024-02-22 04:04:00",
+    "entity_id": "user_0023",
+    "entity_type": "user",
+    "geo_location": "AU-SYD",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "password",
+    "auth_success": true,
+    "session_duration": 14.08,
+    "source_ip": "187.248.108.214",
+    "risk_score": 0.9989,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 5.5035175137163606e-06,
+      "credential_stuffing": 4.899600298813311e-06,
+      "device_spoofing": 1.48522440213128e-05,
+      "impossible_travel": 4.496008114074357e-05,
+      "insider_drift": 7.498358172597364e-06,
+      "lateral_movement": 0.9987605810165405,
+      "low_and_slow": 1.732892997097224e-05,
+      "normal": 0.0011443437542766333
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0680807333232628,
+        "value": 0.0681,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-001025",
+    "timestamp": "2024-02-22 02:01:30",
+    "entity_id": "user_0064",
+    "entity_type": "user",
+    "geo_location": "US-CA",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.25,
+    "source_ip": "55.186.233.166",
+    "risk_score": 0.9986,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.055862877517938614,
+      "credential_stuffing": 0.010878514498472214,
+      "device_spoofing": 7.210083276731893e-05,
+      "impossible_travel": 0.0012306493008509278,
+      "insider_drift": 4.223715586704202e-05,
+      "lateral_movement": 0.9258973002433777,
+      "low_and_slow": 0.004570724908262491,
+      "normal": 0.0014456193894147873
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0695827604830265,
+        "value": 0.0696,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": false
+  },
+  {
+    "id": "ALT-001027",
+    "timestamp": "2024-02-22 02:02:50",
+    "entity_id": "user_0064",
+    "entity_type": "user",
+    "geo_location": "US-CA",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "certificate",
+    "auth_success": true,
+    "session_duration": 19.78,
+    "source_ip": "55.186.233.166",
+    "risk_score": 0.9973,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.0032708491198718548,
+      "credential_stuffing": 3.595330326788826e-06,
+      "device_spoofing": 7.626035312569002e-06,
+      "impossible_travel": 3.366799501236528e-05,
+      "insider_drift": 5.164705271454295e-06,
+      "lateral_movement": 0.993934690952301,
+      "low_and_slow": 3.600101263145916e-05,
+      "normal": 0.002708457875996828
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0695827604830265,
+        "value": 0.0696,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": false
+  },
+  {
+    "id": "ALT-000289",
+    "timestamp": "2024-02-18 18:05:00",
+    "entity_id": "user_0037",
+    "entity_type": "user",
+    "geo_location": "SG-SGP",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "password",
+    "auth_success": true,
+    "session_duration": 23.49,
+    "source_ip": "172.11.229.179",
+    "risk_score": 0.9971,
+    "severity": "CRITICAL",
+    "predicted_label": "impossible_travel",
+    "true_label": "impossible_travel",
+    "class_probabilities": {
+      "brute_force": 1.5904517567832954e-05,
+      "credential_stuffing": 1.2432831681508105e-05,
+      "device_spoofing": 4.128238288103603e-05,
+      "impossible_travel": 0.9969794750213623,
+      "insider_drift": 1.7020085579133593e-05,
+      "lateral_movement": 1.2796871487807948e-05,
+      "low_and_slow": 3.406925679882988e-05,
+      "normal": 0.00288708065636456
+    },
+    "explanation_summary": "Flagged due to: Unusual location (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_geo_anomaly",
+        "label": "Unusual location (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05967630156212383,
+        "value": 0.0597,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Impossible travel \u2014 logins from geographically distant locations within an implausible time window.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-001022",
+    "timestamp": "2024-02-22 02:00:40",
+    "entity_id": "user_0064",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/orders",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.25,
+    "source_ip": "55.186.233.166",
+    "risk_score": 0.9971,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.07116665691137314,
+      "credential_stuffing": 0.01332169771194458,
+      "device_spoofing": 0.00013219854736234993,
+      "impossible_travel": 0.0010672456119209528,
+      "insider_drift": 4.737818380817771e-05,
+      "lateral_movement": 0.9077247977256775,
+      "low_and_slow": 0.0036028148606419563,
+      "normal": 0.0029372021090239286
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0695827604830265,
+        "value": 0.0696,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": false
+  },
+  {
+    "id": "ALT-001023",
+    "timestamp": "2024-02-22 02:01:20",
+    "entity_id": "user_0064",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/reports",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.3,
+    "source_ip": "55.186.233.166",
+    "risk_score": 0.9971,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.07116647064685822,
+      "credential_stuffing": 0.013321662321686745,
+      "device_spoofing": 0.00013485661474987864,
+      "impossible_travel": 0.0010672427015379071,
+      "insider_drift": 4.7378052840940654e-05,
+      "lateral_movement": 0.9077223539352417,
+      "low_and_slow": 0.003602805081754923,
+      "normal": 0.0029371941927820444
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0695827604830265,
+        "value": 0.0696,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": false
+  },
+  {
+    "id": "ALT-001024",
+    "timestamp": "2024-02-22 02:01:30",
+    "entity_id": "user_0064",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/reports",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.44,
+    "source_ip": "55.186.233.166",
+    "risk_score": 0.9971,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.07116647064685822,
+      "credential_stuffing": 0.013321662321686745,
+      "device_spoofing": 0.00013485661474987864,
+      "impossible_travel": 0.0010672427015379071,
+      "insider_drift": 4.7378052840940654e-05,
+      "lateral_movement": 0.9077223539352417,
+      "low_and_slow": 0.003602805081754923,
+      "normal": 0.0029371941927820444
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0695827604830265,
+        "value": 0.0696,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": false
+  },
+  {
+    "id": "ALT-001026",
+    "timestamp": "2024-02-22 02:01:44",
+    "entity_id": "user_0064",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/reports",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.44,
+    "source_ip": "55.186.233.166",
+    "risk_score": 0.9971,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.07116665691137314,
+      "credential_stuffing": 0.01332169771194458,
+      "device_spoofing": 0.00013219854736234993,
+      "impossible_travel": 0.0010672456119209528,
+      "insider_drift": 4.737818380817771e-05,
+      "lateral_movement": 0.9077247977256775,
+      "low_and_slow": 0.0036028148606419563,
+      "normal": 0.0029372021090239286
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0695827604830265,
+        "value": 0.0696,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": false
+  },
+  {
+    "id": "ALT-001030",
+    "timestamp": "2024-02-22 04:00:00",
+    "entity_id": "user_0023",
+    "entity_type": "user",
+    "geo_location": "AU-SYD",
+    "resource_accessed": "/api/v1/analytics",
+    "auth_method": "password",
+    "auth_success": true,
+    "session_duration": 17.66,
+    "source_ip": "144.228.209.155",
+    "risk_score": 0.9969,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 1.0238996765110642e-05,
+      "credential_stuffing": 1.056801738741342e-05,
+      "device_spoofing": 2.3150219931267202e-05,
+      "impossible_travel": 4.086235276190564e-05,
+      "insider_drift": 1.253363643627381e-05,
+      "lateral_movement": 0.9967641830444336,
+      "low_and_slow": 4.837609230889939e-05,
+      "normal": 0.0030900156125426292
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0680807333232628,
+        "value": 0.0681,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-000287",
+    "timestamp": "2024-02-18 18:00:00",
+    "entity_id": "user_0037",
+    "entity_type": "user",
+    "geo_location": "US-NY",
+    "resource_accessed": "/api/v1/inventory",
+    "auth_method": "password",
+    "auth_success": true,
+    "session_duration": 18.9,
+    "source_ip": "136.55.83.35",
+    "risk_score": 0.9954,
+    "severity": "CRITICAL",
+    "predicted_label": "impossible_travel",
+    "true_label": "impossible_travel",
+    "class_probabilities": {
+      "brute_force": 7.751613338768948e-06,
+      "credential_stuffing": 7.03020668879617e-06,
+      "device_spoofing": 1.911265280796215e-05,
+      "impossible_travel": 0.9953540563583374,
+      "insider_drift": 1.022219021251658e-05,
+      "lateral_movement": 7.239996648422675e-06,
+      "low_and_slow": 1.993686964851804e-05,
+      "normal": 0.0045747170224785805
+    },
+    "explanation_summary": "Flagged due to: Unusual location (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_geo_anomaly",
+        "label": "Unusual location (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05967630156212383,
+        "value": 0.0597,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Impossible travel \u2014 logins from geographically distant locations within an implausible time window.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-002169",
+    "timestamp": "2024-02-27 00:01:45",
+    "entity_id": "dev_0116",
+    "entity_type": "edge_device",
+    "geo_location": "US-NY",
+    "resource_accessed": "/admin/config",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.57,
+    "source_ip": "218.140.15.39",
+    "risk_score": 0.9945,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 5.0900449423352256e-05,
+      "credential_stuffing": 0.9943487048149109,
+      "device_spoofing": 5.09742385474965e-05,
+      "impossible_travel": 7.003455266385572e-06,
+      "insider_drift": 9.830353519646451e-06,
+      "lateral_movement": 3.12322772515472e-05,
+      "low_and_slow": 1.0707885849114973e-05,
+      "normal": 0.005490683950483799
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.04).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.035198456208620756,
+        "value": 0.0352,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001459",
+    "timestamp": "2024-02-24 02:07:00",
+    "entity_id": "user_0069",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/internal/keys",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 14.16,
+    "source_ip": "34.136.232.128",
+    "risk_score": 0.9944,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 2.2362446543411352e-05,
+      "credential_stuffing": 1.7163794836960733e-05,
+      "device_spoofing": 5.6040764320641756e-05,
+      "impossible_travel": 0.0004169114399701357,
+      "insider_drift": 2.0000254153274e-05,
+      "lateral_movement": 0.9936491847038269,
+      "low_and_slow": 0.00021672845468856394,
+      "normal": 0.005601570941507816
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0663910162448883,
+        "value": 0.0664,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-002143",
+    "timestamp": "2024-02-26 21:00:00",
+    "entity_id": "user_0066",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.28,
+    "source_ip": "218.57.198.125",
+    "risk_score": 0.9943,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9848284125328064,
+      "credential_stuffing": 0.0077929189428687096,
+      "device_spoofing": 0.0008463417179882526,
+      "impossible_travel": 6.775774818379432e-05,
+      "insider_drift": 2.8780268621630967e-05,
+      "lateral_movement": 3.151619966956787e-05,
+      "low_and_slow": 0.0006714002229273319,
+      "normal": 0.005732828751206398
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.055515383858056294,
+        "value": 0.0555,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001977",
+    "timestamp": "2024-02-26 10:00:30",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/admin/users",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.21,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.9918,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9422985911369324,
+      "credential_stuffing": 0.04108366370201111,
+      "device_spoofing": 0.0010512234875932336,
+      "impossible_travel": 0.000790648628026247,
+      "insider_drift": 0.00014440689119510353,
+      "lateral_movement": 0.005216159392148256,
+      "low_and_slow": 0.0012385919690132141,
+      "normal": 0.008176673203706741
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002183",
+    "timestamp": "2024-02-27 00:05:08",
+    "entity_id": "user_0068",
+    "entity_type": "user",
+    "geo_location": "IN-MUM",
+    "resource_accessed": "/api/v1/inventory",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 0.97,
+    "source_ip": "21.209.40.12",
+    "risk_score": 0.991,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 2.223300361947622e-05,
+      "credential_stuffing": 0.9888297915458679,
+      "device_spoofing": 5.842502650921233e-05,
+      "impossible_travel": 2.6103609343408607e-05,
+      "insider_drift": 3.9478549297200516e-05,
+      "lateral_movement": 7.982913666637614e-05,
+      "low_and_slow": 0.0019536910112947226,
+      "normal": 0.008990488946437836
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.08).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0780152678489685,
+        "value": 0.078,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002172",
+    "timestamp": "2024-02-27 00:02:30",
+    "entity_id": "dev_0118",
+    "entity_type": "edge_device",
+    "geo_location": "IN-MUM",
+    "resource_accessed": "/api/v1/orders",
+    "auth_method": "certificate",
+    "auth_success": true,
+    "session_duration": 0.2,
+    "source_ip": "218.140.15.39",
+    "risk_score": 0.9892,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "credential_stuffing",
+    "class_probabilities": {
+      "brute_force": 5.339828203432262e-05,
+      "credential_stuffing": 0.9886572957038879,
+      "device_spoofing": 0.00029426923720166087,
+      "impossible_travel": 2.2860203898744658e-05,
+      "insider_drift": 5.7728830142877996e-05,
+      "lateral_movement": 4.21560434915591e-05,
+      "low_and_slow": 9.085623605642468e-05,
+      "normal": 0.010781402699649334
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.04).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.040133272900300866,
+        "value": 0.0401,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001981",
+    "timestamp": "2024-02-26 10:01:17",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/admin/users",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.16,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.9891,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9393426775932312,
+      "credential_stuffing": 0.04095478728413582,
+      "device_spoofing": 0.0008537547546438873,
+      "impossible_travel": 0.0008050795295275748,
+      "insider_drift": 0.00014395389007404447,
+      "lateral_movement": 0.0058467513881623745,
+      "low_and_slow": 0.0011382019147276878,
+      "normal": 0.010914786718785763
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001988",
+    "timestamp": "2024-02-26 10:03:02",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/admin/users",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.12,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.9891,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9393450021743774,
+      "credential_stuffing": 0.04095488786697388,
+      "device_spoofing": 0.0008537568501196802,
+      "impossible_travel": 0.0008050815085880458,
+      "insider_drift": 0.00014395425387192518,
+      "lateral_movement": 0.005844340659677982,
+      "low_and_slow": 0.0011382047086954117,
+      "normal": 0.010914813727140427
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001020",
+    "timestamp": "2024-02-22 02:00:35",
+    "entity_id": "user_0064",
+    "entity_type": "user",
+    "geo_location": "US-CA",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.43,
+    "source_ip": "55.186.233.166",
+    "risk_score": 0.9883,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.4130682349205017,
+      "credential_stuffing": 0.08046120405197144,
+      "device_spoofing": 0.000533282058313489,
+      "impossible_travel": 0.009435438551008701,
+      "insider_drift": 0.0003124005161225796,
+      "lateral_movement": 0.45065438747406006,
+      "low_and_slow": 0.03380662947893143,
+      "normal": 0.011728462763130665
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0695827604830265,
+        "value": 0.0696,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": false
+  },
+  {
+    "id": "ALT-001021",
+    "timestamp": "2024-02-22 02:00:39",
+    "entity_id": "user_0064",
+    "entity_type": "user",
+    "geo_location": "US-CA",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.1,
+    "source_ip": "55.186.233.166",
+    "risk_score": 0.9883,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.41313862800598145,
+      "credential_stuffing": 0.08045297861099243,
+      "device_spoofing": 0.0005227160290814936,
+      "impossible_travel": 0.0094344737008214,
+      "insider_drift": 0.00031236858922056854,
+      "lateral_movement": 0.45060834288597107,
+      "low_and_slow": 0.03380317613482475,
+      "normal": 0.01172726508229971
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0695827604830265,
+        "value": 0.0696,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": false
+  },
+  {
+    "id": "ALT-001975",
+    "timestamp": "2024-02-26 10:00:24",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/logs",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.36,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.987,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.937798023223877,
+      "credential_stuffing": 0.040894802659749985,
+      "device_spoofing": 0.0005458326195366681,
+      "impossible_travel": 0.0007791671087034047,
+      "insider_drift": 0.00014374309103004634,
+      "lateral_movement": 0.005192181561142206,
+      "low_and_slow": 0.001622293726541102,
+      "normal": 0.013023965992033482
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001976",
+    "timestamp": "2024-02-26 10:00:28",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.37,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.987,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.937798261642456,
+      "credential_stuffing": 0.04088745266199112,
+      "device_spoofing": 0.0005567087791860104,
+      "impossible_travel": 0.0007790268864482641,
+      "insider_drift": 0.0001437172177247703,
+      "lateral_movement": 0.005191247444599867,
+      "low_and_slow": 0.0016220025718212128,
+      "normal": 0.013021627441048622
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001978",
+    "timestamp": "2024-02-26 10:00:33",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.17,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.987,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9371951818466187,
+      "credential_stuffing": 0.04086115583777428,
+      "device_spoofing": 0.0005563508020713925,
+      "impossible_travel": 0.0007785259513184428,
+      "insider_drift": 0.00014362479851115495,
+      "lateral_movement": 0.005830965004861355,
+      "low_and_slow": 0.0016209594905376434,
+      "normal": 0.013013253919780254
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001980",
+    "timestamp": "2024-02-26 10:01:05",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.31,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.987,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9371928572654724,
+      "credential_stuffing": 0.04086105898022652,
+      "device_spoofing": 0.0005563494050875306,
+      "impossible_travel": 0.0007785240304656327,
+      "insider_drift": 0.00014362443471327424,
+      "lateral_movement": 0.005833370145410299,
+      "low_and_slow": 0.0016209554160013795,
+      "normal": 0.013013222254812717
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001982",
+    "timestamp": "2024-02-26 10:01:21",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/logs",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.33,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.987,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9371928572654724,
+      "credential_stuffing": 0.04086105898022652,
+      "device_spoofing": 0.0005563494050875306,
+      "impossible_travel": 0.0007785240304656327,
+      "insider_drift": 0.00014362443471327424,
+      "lateral_movement": 0.005833370145410299,
+      "low_and_slow": 0.0016209554160013795,
+      "normal": 0.013013222254812717
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001983",
+    "timestamp": "2024-02-26 10:01:24",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.33,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.987,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9371928572654724,
+      "credential_stuffing": 0.04086105898022652,
+      "device_spoofing": 0.0005563494050875306,
+      "impossible_travel": 0.0007785240304656327,
+      "insider_drift": 0.00014362443471327424,
+      "lateral_movement": 0.005833370145410299,
+      "low_and_slow": 0.0016209554160013795,
+      "normal": 0.013013222254812717
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001986",
+    "timestamp": "2024-02-26 10:02:06",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/logs",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.12,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.987,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9371928572654724,
+      "credential_stuffing": 0.04086105898022652,
+      "device_spoofing": 0.0005563494050875306,
+      "impossible_travel": 0.0007785240304656327,
+      "insider_drift": 0.00014362443471327424,
+      "lateral_movement": 0.005833370145410299,
+      "low_and_slow": 0.0016209554160013795,
+      "normal": 0.013013222254812717
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001987",
+    "timestamp": "2024-02-26 10:02:48",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.15,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.987,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9371928572654724,
+      "credential_stuffing": 0.04086105898022652,
+      "device_spoofing": 0.0005563494050875306,
+      "impossible_travel": 0.0007785240304656327,
+      "insider_drift": 0.00014362443471327424,
+      "lateral_movement": 0.005833370145410299,
+      "low_and_slow": 0.0016209554160013795,
+      "normal": 0.013013222254812717
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001989",
+    "timestamp": "2024-02-26 10:03:41",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.18,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.987,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9371928572654724,
+      "credential_stuffing": 0.04086105898022652,
+      "device_spoofing": 0.0005563494050875306,
+      "impossible_travel": 0.0007785240304656327,
+      "insider_drift": 0.00014362443471327424,
+      "lateral_movement": 0.005833370145410299,
+      "low_and_slow": 0.0016209554160013795,
+      "normal": 0.013013222254812717
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001990",
+    "timestamp": "2024-02-26 10:04:00",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.42,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.987,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9371951818466187,
+      "credential_stuffing": 0.04086115583777428,
+      "device_spoofing": 0.0005563508020713925,
+      "impossible_travel": 0.0007785259513184428,
+      "insider_drift": 0.00014362479851115495,
+      "lateral_movement": 0.005830965004861355,
+      "low_and_slow": 0.0016209594905376434,
+      "normal": 0.013013253919780254
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001979",
+    "timestamp": "2024-02-26 10:00:44",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/admin/users",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.19,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.9867,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9371525645256042,
+      "credential_stuffing": 0.04085930064320564,
+      "device_spoofing": 0.0008711162954568863,
+      "impossible_travel": 0.0008032024488784373,
+      "insider_drift": 0.0001436182647012174,
+      "lateral_movement": 0.005830700043588877,
+      "low_and_slow": 0.0010683985892683268,
+      "normal": 0.013271084986627102
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001974",
+    "timestamp": "2024-02-26 10:00:20",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/logs",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.23,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.9866,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9357892870903015,
+      "credential_stuffing": 0.04221544414758682,
+      "device_spoofing": 0.0005634592962451279,
+      "impossible_travel": 0.0008043288835324347,
+      "insider_drift": 0.00014838500646874309,
+      "lateral_movement": 0.00535985641181469,
+      "low_and_slow": 0.001674684346653521,
+      "normal": 0.01344455685466528
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001973",
+    "timestamp": "2024-02-26 10:00:12",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/logs",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.22,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.9861,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9333758354187012,
+      "credential_stuffing": 0.0438021644949913,
+      "device_spoofing": 0.0005846377462148666,
+      "impossible_travel": 0.0008345608366653323,
+      "insider_drift": 0.00015396220260299742,
+      "lateral_movement": 0.005561314523220062,
+      "low_and_slow": 0.0017376290634274483,
+      "normal": 0.013949885033071041
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001019",
+    "timestamp": "2024-02-22 02:00:33",
+    "entity_id": "user_0064",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/reports",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.4,
+    "source_ip": "55.186.233.166",
+    "risk_score": 0.977,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.4899609684944153,
+      "credential_stuffing": 0.09490681439638138,
+      "device_spoofing": 0.0009607517276890576,
+      "impossible_travel": 0.007881578989326954,
+      "insider_drift": 0.0003375330998096615,
+      "lateral_movement": 0.3573319911956787,
+      "low_and_slow": 0.025667276233434677,
+      "normal": 0.022953130304813385
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0695827604830265,
+        "value": 0.0696,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001018",
+    "timestamp": "2024-02-22 02:00:30",
+    "entity_id": "user_0064",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.24,
+    "source_ip": "55.186.233.166",
+    "risk_score": 0.9759,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.47629621624946594,
+      "credential_stuffing": 0.09733082354068756,
+      "device_spoofing": 0.0010692484211176634,
+      "impossible_travel": 0.008082881569862366,
+      "insider_drift": 0.00034615397453308105,
+      "lateral_movement": 0.36645859479904175,
+      "low_and_slow": 0.02632284164428711,
+      "normal": 0.02409328520298004
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0695827604830265,
+        "value": 0.0696,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001971",
+    "timestamp": "2024-02-26 10:00:09",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/admin/users",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.37,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.9746,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.8910084962844849,
+      "credential_stuffing": 0.07673102617263794,
+      "device_spoofing": 0.002145129954442382,
+      "impossible_travel": 0.0012112809345126152,
+      "insider_drift": 0.0002697055460885167,
+      "lateral_movement": 0.0008760647033341229,
+      "low_and_slow": 0.002313290722668171,
+      "normal": 0.0254449974745512
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-002174",
+    "timestamp": "2024-02-27 00:03:00",
+    "entity_id": "dev_0100",
+    "entity_type": "edge_device",
+    "geo_location": "US-CA",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "certificate",
+    "auth_success": true,
+    "session_duration": 4.17,
+    "source_ip": "10.42.84.60",
+    "risk_score": 0.9742,
+    "severity": "CRITICAL",
+    "predicted_label": "insider_drift",
+    "true_label": "normal",
+    "class_probabilities": {
+      "brute_force": 1.118250747822458e-05,
+      "credential_stuffing": 3.5912431485485286e-05,
+      "device_spoofing": 0.00013417276204563677,
+      "impossible_travel": 1.0958690836559981e-05,
+      "insider_drift": 0.9739824533462524,
+      "lateral_movement": 2.468868115101941e-05,
+      "low_and_slow": 8.89531020220602e-06,
+      "normal": 0.025791725143790245
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.04).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.04180667595937848,
+        "value": 0.0418,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Insider drift \u2014 entity is slowly expanding its privilege or resource footprint (edge case).",
+    "risk_color": "#a855f7",
+    "correct": false
+  },
+  {
+    "id": "ALT-001972",
+    "timestamp": "2024-02-26 10:00:10",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.13,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.9734,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.9261165261268616,
+      "credential_stuffing": 0.04346149414777756,
+      "device_spoofing": 0.0005800907965749502,
+      "impossible_travel": 0.0008280700421892107,
+      "insider_drift": 0.0001527647691546008,
+      "lateral_movement": 0.0004992641624994576,
+      "low_and_slow": 0.001724114641547203,
+      "normal": 0.02663765847682953
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001017",
+    "timestamp": "2024-02-22 02:00:20",
+    "entity_id": "user_0064",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.14,
+    "source_ip": "55.186.233.166",
+    "risk_score": 0.967,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.4719424843788147,
+      "credential_stuffing": 0.09644114226102829,
+      "device_spoofing": 0.0010594746563583612,
+      "impossible_travel": 0.00800899788737297,
+      "insider_drift": 0.0003429898642934859,
+      "lateral_movement": 0.36310887336730957,
+      "low_and_slow": 0.026082230731844902,
+      "normal": 0.03301382064819336
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0695827604830265,
+        "value": 0.0696,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001016",
+    "timestamp": "2024-02-22 02:00:15",
+    "entity_id": "user_0064",
+    "entity_type": "user",
+    "geo_location": "BR-SAO",
+    "resource_accessed": "/api/v1/reports",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.22,
+    "source_ip": "55.186.233.166",
+    "risk_score": 0.956,
+    "severity": "CRITICAL",
+    "predicted_label": "lateral_movement",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.31317219138145447,
+      "credential_stuffing": 0.12423085421323776,
+      "device_spoofing": 0.0013647652231156826,
+      "impossible_travel": 0.014600436203181744,
+      "insider_drift": 0.00044182330020703375,
+      "lateral_movement": 0.4685588479042053,
+      "low_and_slow": 0.03359788656234741,
+      "normal": 0.044033173471689224
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0695827604830265,
+        "value": 0.0696,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": false
+  },
+  {
+    "id": "ALT-002151",
+    "timestamp": "2024-02-26 21:01:50",
+    "entity_id": "user_0066",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 36.33,
+    "source_ip": "218.57.198.125",
+    "risk_score": 0.8239,
+    "severity": "CRITICAL",
+    "predicted_label": "brute_force",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.8225647807121277,
+      "credential_stuffing": 5.243029954726808e-05,
+      "device_spoofing": 0.0007847601664252579,
+      "impossible_travel": 0.0001635812222957611,
+      "insider_drift": 7.342168828472495e-05,
+      "lateral_movement": 5.709847391699441e-05,
+      "low_and_slow": 0.0002155562542611733,
+      "normal": 0.1760883331298828
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.055515383858056294,
+        "value": 0.0555,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Brute force attack \u2014 rapid repeated authentication failures from a single source.",
+    "risk_color": "#ef4444",
+    "correct": true
+  },
+  {
+    "id": "ALT-001015",
+    "timestamp": "2024-02-22 02:00:00",
+    "entity_id": "user_0064",
+    "entity_type": "user",
+    "geo_location": "US-CA",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "certificate",
+    "auth_success": false,
+    "session_duration": 0.31,
+    "source_ip": "55.186.233.166",
+    "risk_score": 0.8028,
+    "severity": "CRITICAL",
+    "predicted_label": "credential_stuffing",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.22770750522613525,
+      "credential_stuffing": 0.36047282814979553,
+      "device_spoofing": 0.001982474932447076,
+      "impossible_travel": 0.002074842806905508,
+      "insider_drift": 0.001399580156430602,
+      "lateral_movement": 0.04562223702669144,
+      "low_and_slow": 0.163579061627388,
+      "normal": 0.197161465883255
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0695827604830265,
+        "value": 0.0696,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Credential stuffing \u2014 authentication attempts across many accounts from few source IPs.",
+    "risk_color": "#ef4444",
+    "correct": false
+  },
+  {
+    "id": "ALT-001458",
+    "timestamp": "2024-02-24 02:00:00",
+    "entity_id": "user_0069",
+    "entity_type": "user",
+    "geo_location": "SG-SGP",
+    "resource_accessed": "/internal/secrets",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 10.52,
+    "source_ip": "117.124.0.229",
+    "risk_score": 0.7419,
+    "severity": "HIGH",
+    "predicted_label": "lateral_movement",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 0.0002825692354235798,
+      "credential_stuffing": 0.0002564532624091953,
+      "device_spoofing": 0.0006704989937134087,
+      "impossible_travel": 0.0018439919222146273,
+      "insider_drift": 0.00023471655731555074,
+      "lateral_movement": 0.7341198921203613,
+      "low_and_slow": 0.004511346109211445,
+      "normal": 0.25808051228523254
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.07).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0663910162448883,
+        "value": 0.0664,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-002412",
+    "timestamp": "2024-02-28 01:18:00",
+    "entity_id": "user_0063",
+    "entity_type": "user",
+    "geo_location": "AU-SYD",
+    "resource_accessed": "/admin/config",
+    "auth_method": "password",
+    "auth_success": true,
+    "session_duration": 42.82,
+    "source_ip": "194.46.116.134",
+    "risk_score": 0.7373,
+    "severity": "HIGH",
+    "predicted_label": "lateral_movement",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 0.00900290161371231,
+      "credential_stuffing": 0.005680266302078962,
+      "device_spoofing": 0.02671859785914421,
+      "impossible_travel": 0.013793868944048882,
+      "insider_drift": 0.008109372109174728,
+      "lateral_movement": 0.34139811992645264,
+      "low_and_slow": 0.33260801434516907,
+      "normal": 0.26268887519836426
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.05).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0509480211351599,
+        "value": 0.0509,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Lateral movement \u2014 entity accessing an unusual sequence or breadth of resources it has not touched before.",
+    "risk_color": "#f97316",
+    "correct": true
+  },
+  {
+    "id": "ALT-002408",
+    "timestamp": "2024-02-28 01:00:00",
+    "entity_id": "user_0063",
+    "entity_type": "user",
+    "geo_location": "AU-SYD",
+    "resource_accessed": "/internal/secrets",
+    "auth_method": "password",
+    "auth_success": true,
+    "session_duration": 21.94,
+    "source_ip": "104.157.114.69",
+    "risk_score": 0.6973,
+    "severity": "HIGH",
+    "predicted_label": "low_and_slow",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 0.006761385127902031,
+      "credential_stuffing": 0.007092165295034647,
+      "device_spoofing": 0.09622329473495483,
+      "impossible_travel": 0.01284671388566494,
+      "insider_drift": 0.010125056840479374,
+      "lateral_movement": 0.04561208188533783,
+      "low_and_slow": 0.51863694190979,
+      "normal": 0.3027023673057556
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.05).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0509480211351599,
+        "value": 0.0509,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Low-and-slow exfiltration \u2014 gradual off-hours resource access building up over multiple days.",
+    "risk_color": "#f97316",
+    "correct": false
+  },
+  {
+    "id": "ALT-000550",
+    "timestamp": "2024-02-20 00:53:00",
+    "entity_id": "svc_0080",
+    "entity_type": "service_account",
+    "geo_location": "US-TX",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 4.02,
+    "source_ip": "172.28.167.233",
+    "risk_score": 0.688,
+    "severity": "HIGH",
+    "predicted_label": "insider_drift",
+    "true_label": "normal",
+    "class_probabilities": {
+      "brute_force": 0.00032064307015389204,
+      "credential_stuffing": 0.0010151693131774664,
+      "device_spoofing": 0.014409591443836689,
+      "impossible_travel": 0.00028815362020395696,
+      "insider_drift": 0.6709635853767395,
+      "lateral_movement": 0.0007856246666051447,
+      "low_and_slow": 0.0002636058197822422,
+      "normal": 0.31195366382598877
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.04).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.04027980303063112,
+        "value": 0.0403,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Insider drift \u2014 entity is slowly expanding its privilege or resource footprint (edge case).",
+    "risk_color": "#a855f7",
+    "correct": false
+  },
+  {
+    "id": "ALT-002643",
+    "timestamp": "2024-02-29 00:03:00",
+    "entity_id": "svc_0080",
+    "entity_type": "service_account",
+    "geo_location": "US-TX",
+    "resource_accessed": "/api/v1/payments",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 4.69,
+    "source_ip": "10.31.164.195",
+    "risk_score": 0.6553,
+    "severity": "HIGH",
+    "predicted_label": "insider_drift",
+    "true_label": "normal",
+    "class_probabilities": {
+      "brute_force": 0.00024842959828674793,
+      "credential_stuffing": 0.0007865383522585034,
+      "device_spoofing": 0.003450842574238777,
+      "impossible_travel": 0.00029546034056693316,
+      "insider_drift": 0.6498876214027405,
+      "lateral_movement": 0.0004394378629513085,
+      "low_and_slow": 0.00020469453011173755,
+      "normal": 0.34468695521354675
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.04).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.04027980303063112,
+        "value": 0.0403,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Insider drift \u2014 entity is slowly expanding its privilege or resource footprint (edge case).",
+    "risk_color": "#a855f7",
+    "correct": false
+  },
+  {
+    "id": "ALT-002414",
+    "timestamp": "2024-02-28 01:28:00",
+    "entity_id": "user_0063",
+    "entity_type": "user",
+    "geo_location": "AU-SYD",
+    "resource_accessed": "/api/v1/analytics",
+    "auth_method": "password",
+    "auth_success": true,
+    "session_duration": 40.65,
+    "source_ip": "77.79.83.110",
+    "risk_score": 0.6242,
+    "severity": "HIGH",
+    "predicted_label": "normal",
+    "true_label": "lateral_movement",
+    "class_probabilities": {
+      "brute_force": 0.009884377010166645,
+      "credential_stuffing": 0.006236422806978226,
+      "device_spoofing": 0.027954673394560814,
+      "impossible_travel": 0.015144427306950092,
+      "insider_drift": 0.00885553378611803,
+      "lateral_movement": 0.3748244643211365,
+      "low_and_slow": 0.18130023777484894,
+      "normal": 0.37579989433288574
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Unusual resource (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.05).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "bp_resource_anomaly",
+        "label": "Unusual resource (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0509480211351599,
+        "value": 0.0509,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Normal access pattern \u2014 no anomaly detected.",
+    "risk_color": "#22c55e",
+    "correct": false
+  },
+  {
+    "id": "ALT-001970",
+    "timestamp": "2024-02-26 10:00:00",
+    "entity_id": "user_0013",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/users",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 0.45,
+    "source_ip": "223.33.83.93",
+    "risk_score": 0.5373,
+    "severity": "HIGH",
+    "predicted_label": "normal",
+    "true_label": "brute_force",
+    "class_probabilities": {
+      "brute_force": 0.38787218928337097,
+      "credential_stuffing": 0.13778537511825562,
+      "device_spoofing": 0.0021661976352334023,
+      "impossible_travel": 0.0018725605914369226,
+      "insider_drift": 0.00048430837341584265,
+      "lateral_movement": 0.0011114786611869931,
+      "low_and_slow": 0.0060468330048024654,
+      "normal": 0.4626610279083252
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.06).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05895620062947273,
+        "value": 0.059,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Normal access pattern \u2014 no anomaly detected.",
+    "risk_color": "#22c55e",
+    "correct": false
+  },
+  {
+    "id": "ALT-002693",
+    "timestamp": "2024-02-29 09:50:00",
+    "entity_id": "user_0031",
+    "entity_type": "user",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/api/v1/reports",
+    "auth_method": "password",
+    "auth_success": true,
+    "session_duration": 12.93,
+    "source_ip": "166.161.98.240",
+    "risk_score": 0.4809,
+    "severity": "MEDIUM",
+    "predicted_label": "normal",
+    "true_label": "normal",
+    "class_probabilities": {
+      "brute_force": 8.127387991407886e-05,
+      "credential_stuffing": 6.974813004489988e-05,
+      "device_spoofing": 0.0036223474889993668,
+      "impossible_travel": 0.4768151044845581,
+      "insider_drift": 6.843613664386794e-05,
+      "lateral_movement": 0.00015816774975974113,
+      "low_and_slow": 7.61823175707832e-05,
+      "normal": 0.5191087126731873
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.05).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.05185917605246816,
+        "value": 0.0519,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Normal access pattern \u2014 no anomaly detected.",
+    "risk_color": "#22c55e",
+    "correct": true
+  },
+  {
+    "id": "ALT-001453",
+    "timestamp": "2024-02-24 01:27:00",
+    "entity_id": "svc_0088",
+    "entity_type": "service_account",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/admin/config",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 2.84,
+    "source_ip": "198.10.50.17",
+    "risk_score": 0.4779,
+    "severity": "MEDIUM",
+    "predicted_label": "normal",
+    "true_label": "normal",
+    "class_probabilities": {
+      "brute_force": 0.0003187629336025566,
+      "credential_stuffing": 0.0002715873415581882,
+      "device_spoofing": 0.47562873363494873,
+      "impossible_travel": 0.00031671361648477614,
+      "insider_drift": 0.000406826613470912,
+      "lateral_movement": 0.000650180212687701,
+      "low_and_slow": 0.00033946314943023026,
+      "normal": 0.5220677256584167
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.04).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.037518350407481194,
+        "value": 0.0375,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Normal access pattern \u2014 no anomaly detected.",
+    "risk_color": "#22c55e",
+    "correct": true
+  },
+  {
+    "id": "ALT-002124",
+    "timestamp": "2024-02-26 17:56:00",
+    "entity_id": "svc_0093",
+    "entity_type": "service_account",
+    "geo_location": "UK-LDN",
+    "resource_accessed": "/api/v1/logs",
+    "auth_method": "token",
+    "auth_success": false,
+    "session_duration": 4.07,
+    "source_ip": "134.7.55.104",
+    "risk_score": 0.4499,
+    "severity": "MEDIUM",
+    "predicted_label": "normal",
+    "true_label": "normal",
+    "class_probabilities": {
+      "brute_force": 0.4424794912338257,
+      "credential_stuffing": 0.0015049163484945893,
+      "device_spoofing": 0.002200852148234844,
+      "impossible_travel": 0.0019894244614988565,
+      "insider_drift": 0.0003609707055147737,
+      "lateral_movement": 0.0004734941467177123,
+      "low_and_slow": 0.0008687658119015396,
+      "normal": 0.550122082233429
+    },
+    "explanation_summary": "Flagged due to: Unusual login hour (vs baseline) (+1.00), Sequence pattern deviation (LSTM) (+0.04).",
+    "explanation_factors": [
+      {
+        "feature": "bp_hour_anomaly",
+        "label": "Unusual login hour (vs baseline)",
+        "shap": 1.0,
+        "value": 1.0,
+        "direction": "\u2191 increases risk"
+      },
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.0408888473533667,
+        "value": 0.0409,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Normal access pattern \u2014 no anomaly detected.",
+    "risk_color": "#22c55e",
+    "correct": true
+  },
+  {
+    "id": "ALT-002405",
+    "timestamp": "2024-02-27 23:44:00",
+    "entity_id": "svc_0088",
+    "entity_type": "service_account",
+    "geo_location": "DE-BER",
+    "resource_accessed": "/admin/config",
+    "auth_method": "token",
+    "auth_success": true,
+    "session_duration": 2.94,
+    "source_ip": "203.189.91.237",
+    "risk_score": 0.4085,
+    "severity": "MEDIUM",
+    "predicted_label": "normal",
+    "true_label": "normal",
+    "class_probabilities": {
+      "brute_force": 0.0004092910676263273,
+      "credential_stuffing": 0.00040292253834195435,
+      "device_spoofing": 0.4050845503807068,
+      "impossible_travel": 0.00043197316699661314,
+      "insider_drift": 0.0004516309127211571,
+      "lateral_movement": 0.0006051387754268944,
+      "low_and_slow": 0.001109654433093965,
+      "normal": 0.5915048122406006
+    },
+    "explanation_summary": "Flagged due to: Sequence pattern deviation (LSTM) (+0.04).",
+    "explanation_factors": [
+      {
+        "feature": "lstm_recon_error",
+        "label": "Sequence pattern deviation (LSTM)",
+        "shap": 0.037518350407481194,
+        "value": 0.0375,
+        "direction": "\u2191 increases risk"
+      }
+    ],
+    "attack_description": "Normal access pattern \u2014 no anomaly detected.",
+    "risk_color": "#22c55e",
+    "correct": true
+  }
+]

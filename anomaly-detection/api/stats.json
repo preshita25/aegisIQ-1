@@ -1,0 +1,23 @@
+{
+  "total_events": 14387,
+  "total_entities": 120,
+  "total_alerts": 92,
+  "label_distribution": {
+    "normal": 13997,
+    "brute_force": 80,
+    "lateral_movement": 73,
+    "credential_stuffing": 69,
+    "low_and_slow": 56,
+    "device_spoofing": 50,
+    "impossible_travel": 48,
+    "insider_drift": 14
+  },
+  "anomaly_rate_pct": 2.71,
+  "weighted_f1": 0.9888,
+  "binary_precision": 0.9651,
+  "binary_recall": 0.8469,
+  "fp_rate_top1pct": 0.0,
+  "date_range_start": "2024-01-01 00:03:00",
+  "date_range_end": "2024-02-29 23:59:00",
+  "trained_at": "2026-07-26T02:08:55.386956"
+}

@@ -1,0 +1,4092 @@
+{
+  "user_0000": {
+    "type": "user",
+    "typical_geo": [
+      "US-NY"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/admin/users",
+      "/api/v1/users"
+    ],
+    "auth_method": "certificate",
+    "os": "Windows 11",
+    "mac": "d8:10:0f:2f:6f:77",
+    "proto": "TLS1.3",
+    "avg_session_min": 24.643577202851453,
+    "fail_rate": 0.035800980646120174
+  },
+  "user_0001": {
+    "type": "user",
+    "typical_geo": [
+      "UK-LDN",
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/api/v1/inventory",
+      "/api/v1/payments",
+      "/api/v1/logs"
+    ],
+    "auth_method": "password",
+    "os": "Ubuntu 22.04",
+    "mac": "ac:34:2f:c2:31:b7",
+    "proto": "SSH",
+    "avg_session_min": 26.130411097841186,
+    "fail_rate": 0.04035641366371901
+  },
+  "user_0002": {
+    "type": "user",
+    "typical_geo": [
+      "BR-SAO",
+      "US-CA"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/admin/config",
+      "/api/v1/orders",
+      "/api/v1/users"
+    ],
+    "auth_method": "password",
+    "os": "Ubuntu 22.04",
+    "mac": "94:28:77:33:c2:8e",
+    "proto": "MQTT",
+    "avg_session_min": 27.248955549254006,
+    "fail_rate": 0.018241608948504212
+  },
+  "user_0003": {
+    "type": "user",
+    "typical_geo": [
+      "IN-MUM",
+      "UK-LDN"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/api/v1/reports",
+      "/api/v1/orders",
+      "/api/v1/logs"
+    ],
+    "auth_method": "token",
+    "os": "macOS 14",
+    "mac": "70:a6:1c:75:10:a1",
+    "proto": "MQTT",
+    "avg_session_min": 14.370930659149595,
+    "fail_rate": 0.010549142179316323
+  },
+  "user_0004": {
+    "type": "user",
+    "typical_geo": [
+      "UK-LDN",
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/admin/config",
+      "/api/v1/orders",
+      "/api/v1/inventory"
+    ],
+    "auth_method": "certificate",
+    "os": "macOS 14",
+    "mac": "db:cc:b9:70:46:fc",
+    "proto": "TLS1.3",
+    "avg_session_min": 31.452375513680824,
+    "fail_rate": 0.04305514548333329
+  },
+  "user_0005": {
+    "type": "user",
+    "typical_geo": [
+      "US-TX"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/api/v1/inventory",
+      "/api/v1/reports"
+    ],
+    "auth_method": "certificate",
+    "os": "CentOS 7",
+    "mac": "80:05:3a:88:ae:39",
+    "proto": "SSH",
+    "avg_session_min": 20.216783773418676,
+    "fail_rate": 0.022686185316460324
+  },
+  "user_0006": {
+    "type": "user",
+    "typical_geo": [
+      "BR-SAO",
+      "US-TX"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/api/v1/logs",
+      "/api/v1/orders"
+    ],
+    "auth_method": "certificate",
+    "os": "Windows 11",
+    "mac": "a5:fa:09:39:b9:9d",
+    "proto": "TLS1.2",
+    "avg_session_min": 7.0273808272965645,
+    "fail_rate": 0.04390047996020203
+  },
+  "user_0007": {
+    "type": "user",
+    "typical_geo": [
+      "US-CA"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/admin/users",
+      "/api/v1/reports"
+    ],
+    "auth_method": "certificate",
+    "os": "Ubuntu 22.04",
+    "mac": "87:d8:6c:66:9f:cc",
+    "proto": "SSH",
+    "avg_session_min": 20.333502937007644,
+    "fail_rate": 0.025878792051779533
+  },
+  "user_0008": {
+    "type": "user",
+    "typical_geo": [
+      "UK-LDN"
+    ],
+    "typical_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/api/v1/users",
+      "/admin/config",
+      "/api/v1/inventory",
+      "/api/v1/orders"
+    ],
+    "auth_method": "certificate",
+    "os": "Ubuntu 22.04",
+    "mac": "03:24:1e:75:22:10",
+    "proto": "SSH",
+    "avg_session_min": 7.48000724610287,
+    "fail_rate": 0.011900231718449762
+  },
+  "user_0009": {
+    "type": "user",
+    "typical_geo": [
+      "UK-LDN",
+      "BR-SAO"
+    ],
+    "typical_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/api/v1/reports",
+      "/api/v1/inventory",
+      "/api/v1/logs",
+      "/admin/users",
+      "/api/v1/orders"
+    ],
+    "auth_method": "password",
+    "os": "Windows 11",
+    "mac": "dc:b5:d8:d2:ef:1b",
+    "proto": "TLS1.3",
+    "avg_session_min": 7.121443592695478,
+    "fail_rate": 0.03641067942205913
+  },
+  "user_0010": {
+    "type": "user",
+    "typical_geo": [
+      "UK-LDN"
+    ],
+    "typical_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/api/v1/reports",
+      "/api/v1/orders",
+      "/api/v1/logs",
+      "/api/v1/inventory"
+    ],
+    "auth_method": "password",
+    "os": "Windows 11",
+    "mac": "e2:32:19:07:2f:79",
+    "proto": "TLS1.2",
+    "avg_session_min": 19.22449202833652,
+    "fail_rate": 0.024067920898551975
+  },
+  "user_0011": {
+    "type": "user",
+    "typical_geo": [
+      "US-NY",
+      "US-TX"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/admin/config",
+      "/api/v1/inventory",
+      "/api/v1/reports",
+      "/api/v1/payments",
+      "/admin/users"
+    ],
+    "auth_method": "certificate",
+    "os": "CentOS 7",
+    "mac": "4f:61:97:6f:1d:1f",
+    "proto": "SSH",
+    "avg_session_min": 7.000784551761908,
+    "fail_rate": 0.029208879722948562
+  },
+  "user_0012": {
+    "type": "user",
+    "typical_geo": [
+      "US-NY"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "typical_resources": [
+      "/api/v1/orders",
+      "/admin/users"
+    ],
+    "auth_method": "password",
+    "os": "CentOS 7",
+    "mac": "3d:7e:14:29:d6:a1",
+    "proto": "SSH",
+    "avg_session_min": 12.149071979823775,
+    "fail_rate": 0.03580959003947074
+  },
+  "user_0013": {
+    "type": "user",
+    "typical_geo": [
+      "DE-BER"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "typical_resources": [
+      "/api/v1/logs",
+      "/api/v1/payments",
+      "/api/v1/users",
+      "/admin/users"
+    ],
+    "auth_method": "token",
+    "os": "Windows 11",
+    "mac": "25:6d:87:43:b2:23",
+    "proto": "TLS1.2",
+    "avg_session_min": 17.93344810586094,
+    "fail_rate": 0.0078873416178616
+  },
+  "user_0014": {
+    "type": "user",
+    "typical_geo": [
+      "JP-TYO",
+      "BR-SAO"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/api/v1/orders",
+      "/api/v1/logs",
+      "/api/v1/payments",
+      "/api/v1/users"
+    ],
+    "auth_method": "password",
+    "os": "Ubuntu 22.04",
+    "mac": "8b:90:6b:af:68:87",
+    "proto": "MQTT",
+    "avg_session_min": 13.789243822446293,
+    "fail_rate": 0.0454079523109286
+  },
+  "user_0015": {
+    "type": "user",
+    "typical_geo": [
+      "US-CA"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typical_resources": [
+      "/api/v1/users",
+      "/api/v1/payments"
+    ],
+    "auth_method": "password",
+    "os": "macOS 14",
+    "mac": "52:e2:da:04:39:26",
+    "proto": "TLS1.2",
+    "avg_session_min": 24.09566012219328,
+    "fail_rate": 0.04172975099430084
+  },
+  "user_0016": {
+    "type": "user",
+    "typical_geo": [
+      "SG-SGP"
+    ],
+    "typical_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/api/v1/inventory",
+      "/api/v1/users",
+      "/api/v1/payments"
+    ],
+    "auth_method": "password",
+    "os": "Ubuntu 22.04",
+    "mac": "34:b5:d0:4f:79:53",
+    "proto": "TLS1.2",
+    "avg_session_min": 35.84956716321635,
+    "fail_rate": 0.0012393180949094363
+  },
+  "user_0017": {
+    "type": "user",
+    "typical_geo": [
+      "SG-SGP",
+      "UK-LDN"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "typical_resources": [
+      "/api/v1/inventory",
+      "/api/v1/logs"
+    ],
+    "auth_method": "password",
+    "os": "CentOS 7",
+    "mac": "71:66:eb:b3:9c:74",
+    "proto": "TLS1.2",
+    "avg_session_min": 5.828255214550803,
+    "fail_rate": 0.009656489416385434
+  },
+  "user_0018": {
+    "type": "user",
+    "typical_geo": [
+      "DE-BER",
+      "US-CA"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/api/v1/users",
+      "/api/v1/inventory",
+      "/api/v1/payments",
+      "/api/v1/orders"
+    ],
+    "auth_method": "certificate",
+    "os": "macOS 14",
+    "mac": "13:37:de:b0:a0:df",
+    "proto": "TLS1.3",
+    "avg_session_min": 18.48184016706545,
+    "fail_rate": 0.028829402174829977
+  },
+  "user_0019": {
+    "type": "user",
+    "typical_geo": [
+      "US-NY",
+      "SG-SGP"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/api/v1/reports",
+      "/api/v1/users"
+    ],
+    "auth_method": "certificate",
+    "os": "macOS 14",
+    "mac": "a0:3f:99:9e:d1:a7",
+    "proto": "MQTT",
+    "avg_session_min": 29.402294496803968,
+    "fail_rate": 0.027720623883339686
+  },
+  "user_0020": {
+    "type": "user",
+    "typical_geo": [
+      "SG-SGP"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "typical_resources": [
+      "/api/v1/inventory",
+      "/admin/config",
+      "/api/v1/users",
+      "/api/v1/payments"
+    ],
+    "auth_method": "token",
+    "os": "Ubuntu 22.04",
+    "mac": "dc:a4:ee:e2:e2:6d",
+    "proto": "MQTT",
+    "avg_session_min": 32.78073896871007,
+    "fail_rate": 0.047991600184151814
+  },
+  "user_0021": {
+    "type": "user",
+    "typical_geo": [
+      "US-CA"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/api/v1/orders",
+      "/api/v1/inventory",
+      "/api/v1/logs",
+      "/api/v1/payments"
+    ],
+    "auth_method": "password",
+    "os": "Ubuntu 22.04",
+    "mac": "4b:0c:17:7d:f3:25",
+    "proto": "MQTT",
+    "avg_session_min": 19.505435384920176,
+    "fail_rate": 0.03148826903688569
+  },
+  "user_0022": {
+    "type": "user",
+    "typical_geo": [
+      "SG-SGP"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/admin/users",
+      "/api/v1/inventory"
+    ],
+    "auth_method": "password",
+    "os": "Windows 11",
+    "mac": "d9:70:5a:ed:19:7f",
+    "proto": "TLS1.3",
+    "avg_session_min": 20.97616389145604,
+    "fail_rate": 0.04007083008611323
+  },
+  "user_0023": {
+    "type": "user",
+    "typical_geo": [
+      "AU-SYD",
+      "BR-SAO"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/admin/users",
+      "/api/v1/reports",
+      "/api/v1/inventory",
+      "/api/v1/logs"
+    ],
+    "auth_method": "password",
+    "os": "macOS 14",
+    "mac": "f8:7a:8c:e1:27:92",
+    "proto": "TLS1.2",
+    "avg_session_min": 14.510028747876461,
+    "fail_rate": 0.015985478420938115
+  },
+  "user_0024": {
+    "type": "user",
+    "typical_geo": [
+      "US-TX"
+    ],
+    "typical_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/admin/users",
+      "/api/v1/orders",
+      "/api/v1/users",
+      "/api/v1/reports"
+    ],
+    "auth_method": "token",
+    "os": "macOS 14",
+    "mac": "ee:d4:1f:69:d7:c7",
+    "proto": "TLS1.3",
+    "avg_session_min": 34.985621130637696,
+    "fail_rate": 0.038279728805903475
+  },
+  "user_0025": {
+    "type": "user",
+    "typical_geo": [
+      "AU-SYD",
+      "US-NY"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typical_resources": [
+      "/api/v1/inventory",
+      "/admin/config",
+      "/admin/users",
+      "/api/v1/logs",
+      "/api/v1/orders"
+    ],
+    "auth_method": "token",
+    "os": "Ubuntu 22.04",
+    "mac": "8b:df:f8:0e:c7:ac",
+    "proto": "MQTT",
+    "avg_session_min": 30.346348216955107,
+    "fail_rate": 0.04202528315312793
+  },
+  "user_0026": {
+    "type": "user",
+    "typical_geo": [
+      "JP-TYO"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/api/v1/orders",
+      "/admin/users"
+    ],
+    "auth_method": "token",
+    "os": "Ubuntu 22.04",
+    "mac": "ec:5d:19:85:c2:a7",
+    "proto": "TLS1.2",
+    "avg_session_min": 20.914476375576875,
+    "fail_rate": 0.016875027403693534
+  },
+  "user_0027": {
+    "type": "user",
+    "typical_geo": [
+      "DE-BER",
+      "SG-SGP"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/api/v1/users",
+      "/admin/users",
+      "/admin/config",
+      "/api/v1/logs",
+      "/api/v1/payments"
+    ],
+    "auth_method": "password",
+    "os": "Windows 11",
+    "mac": "14:0f:7e:66:0a:4e",
+    "proto": "TLS1.2",
+    "avg_session_min": 9.417734120597219,
+    "fail_rate": 0.033472942230995534
+  },
+  "user_0028": {
+    "type": "user",
+    "typical_geo": [
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typical_resources": [
+      "/api/v1/orders",
+      "/api/v1/inventory",
+      "/api/v1/logs"
+    ],
+    "auth_method": "token",
+    "os": "Windows 11",
+    "mac": "0d:9f:c0:cb:65:26",
+    "proto": "TLS1.2",
+    "avg_session_min": 8.566545690609178,
+    "fail_rate": 0.038624044247561204
+  },
+  "user_0029": {
+    "type": "user",
+    "typical_geo": [
+      "JP-TYO"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/api/v1/users",
+      "/admin/config",
+      "/api/v1/payments",
+      "/api/v1/inventory"
+    ],
+    "auth_method": "token",
+    "os": "CentOS 7",
+    "mac": "36:dd:b9:eb:4e:de",
+    "proto": "TLS1.2",
+    "avg_session_min": 30.682835640468717,
+    "fail_rate": 0.04827368656190389
+  },
+  "user_0030": {
+    "type": "user",
+    "typical_geo": [
+      "JP-TYO",
+      "BR-SAO"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/admin/config",
+      "/api/v1/payments",
+      "/api/v1/orders",
+      "/api/v1/users",
+      "/api/v1/inventory"
+    ],
+    "auth_method": "token",
+    "os": "Ubuntu 22.04",
+    "mac": "ed:c2:ac:0e:fd:a6",
+    "proto": "TLS1.2",
+    "avg_session_min": 22.064247633697054,
+    "fail_rate": 0.017741248308804764
+  },
+  "user_0031": {
+    "type": "user",
+    "typical_geo": [
+      "IN-MUM",
+      "DE-BER"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/api/v1/reports",
+      "/api/v1/users"
+    ],
+    "auth_method": "password",
+    "os": "CentOS 7",
+    "mac": "fa:7b:f3:fb:e5:08",
+    "proto": "TLS1.3",
+    "avg_session_min": 15.298245346217406,
+    "fail_rate": 0.020220056433896405
+  },
+  "user_0032": {
+    "type": "user",
+    "typical_geo": [
+      "DE-BER"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/api/v1/inventory",
+      "/admin/users",
+      "/admin/config",
+      "/api/v1/payments"
+    ],
+    "auth_method": "token",
+    "os": "CentOS 7",
+    "mac": "8a:9c:80:76:3d:62",
+    "proto": "SSH",
+    "avg_session_min": 9.18441594392685,
+    "fail_rate": 0.026793198269187492
+  },
+  "user_0033": {
+    "type": "user",
+    "typical_geo": [
+      "UK-LDN"
+    ],
+    "typical_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/admin/config",
+      "/api/v1/users",
+      "/api/v1/orders",
+      "/api/v1/payments"
+    ],
+    "auth_method": "password",
+    "os": "macOS 14",
+    "mac": "5b:9a:07:40:8c:17",
+    "proto": "TLS1.3",
+    "avg_session_min": 24.36756383795129,
+    "fail_rate": 0.03487086964550972
+  },
+  "user_0034": {
+    "type": "user",
+    "typical_geo": [
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/api/v1/logs",
+      "/api/v1/reports",
+      "/api/v1/inventory",
+      "/api/v1/payments"
+    ],
+    "auth_method": "password",
+    "os": "Windows 11",
+    "mac": "81:f4:3a:21:cd:fb",
+    "proto": "TLS1.3",
+    "avg_session_min": 25.195740476478633,
+    "fail_rate": 0.034322550912800835
+  },
+  "user_0035": {
+    "type": "user",
+    "typical_geo": [
+      "US-TX"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/api/v1/orders",
+      "/admin/config",
+      "/api/v1/reports"
+    ],
+    "auth_method": "certificate",
+    "os": "Ubuntu 22.04",
+    "mac": "c2:e6:e2:98:db:9c",
+    "proto": "TLS1.3",
+    "avg_session_min": 26.33708192857956,
+    "fail_rate": 0.03700446527422725
+  },
+  "user_0036": {
+    "type": "user",
+    "typical_geo": [
+      "UK-LDN"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/api/v1/reports",
+      "/api/v1/orders",
+      "/admin/config"
+    ],
+    "auth_method": "password",
+    "os": "Ubuntu 22.04",
+    "mac": "01:d1:e6:f0:95:10",
+    "proto": "TLS1.2",
+    "avg_session_min": 15.083671135779126,
+    "fail_rate": 0.014135918655614388
+  },
+  "user_0037": {
+    "type": "user",
+    "typical_geo": [
+      "US-CA",
+      "UK-LDN"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/api/v1/inventory",
+      "/api/v1/users",
+      "/admin/config"
+    ],
+    "auth_method": "password",
+    "os": "Ubuntu 22.04",
+    "mac": "88:48:24:1e:54:9d",
+    "proto": "SSH",
+    "avg_session_min": 20.37037070358081,
+    "fail_rate": 0.023434898513808096
+  },
+  "user_0038": {
+    "type": "user",
+    "typical_geo": [
+      "SG-SGP",
+      "DE-BER"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/api/v1/users",
+      "/api/v1/reports"
+    ],
+    "auth_method": "certificate",
+    "os": "macOS 14",
+    "mac": "80:0d:2e:75:0a:89",
+    "proto": "TLS1.3",
+    "avg_session_min": 31.70881514600969,
+    "fail_rate": 0.008759536396898632
+  },
+  "user_0039": {
+    "type": "user",
+    "typical_geo": [
+      "DE-BER",
+      "US-TX"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/api/v1/logs",
+      "/api/v1/payments"
+    ],
+    "auth_method": "token",
+    "os": "macOS 14",
+    "mac": "a4:35:52:a8:d2:fd",
+    "proto": "SSH",
+    "avg_session_min": 28.19042379470001,
+    "fail_rate": 0.020022612740682823
+  },
+  "user_0040": {
+    "type": "user",
+    "typical_geo": [
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/api/v1/users",
+      "/api/v1/reports",
+      "/admin/config"
+    ],
+    "auth_method": "password",
+    "os": "CentOS 7",
+    "mac": "d3:1b:60:b9:ff:e2",
+    "proto": "TLS1.3",
+    "avg_session_min": 12.124538342259585,
+    "fail_rate": 0.027460981954266585
+  },
+  "user_0041": {
+    "type": "user",
+    "typical_geo": [
+      "AU-SYD",
+      "JP-TYO"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/api/v1/logs",
+      "/admin/config"
+    ],
+    "auth_method": "password",
+    "os": "CentOS 7",
+    "mac": "2f:73:3a:ec:3c:4e",
+    "proto": "MQTT",
+    "avg_session_min": 37.64285709769366,
+    "fail_rate": 0.014593078013089301
+  },
+  "user_0042": {
+    "type": "user",
+    "typical_geo": [
+      "SG-SGP",
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/api/v1/reports",
+      "/api/v1/orders",
+      "/admin/config",
+      "/admin/users"
+    ],
+    "auth_method": "password",
+    "os": "macOS 14",
+    "mac": "d4:ae:88:01:90:98",
+    "proto": "MQTT",
+    "avg_session_min": 35.28412081450849,
+    "fail_rate": 0.022327369652159725
+  },
+  "user_0043": {
+    "type": "user",
+    "typical_geo": [
+      "IN-MUM",
+      "JP-TYO"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/api/v1/reports",
+      "/admin/users",
+      "/api/v1/orders",
+      "/admin/config"
+    ],
+    "auth_method": "token",
+    "os": "Ubuntu 22.04",
+    "mac": "d2:16:a2:f2:c3:c5",
+    "proto": "TLS1.2",
+    "avg_session_min": 22.336502736574822,
+    "fail_rate": 0.0018509805672788093
+  },
+  "user_0044": {
+    "type": "user",
+    "typical_geo": [
+      "US-CA",
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/api/v1/users",
+      "/admin/users",
+      "/api/v1/orders",
+      "/api/v1/reports",
+      "/api/v1/inventory"
+    ],
+    "auth_method": "password",
+    "os": "CentOS 7",
+    "mac": "87:ad:cb:29:a8:c2",
+    "proto": "SSH",
+    "avg_session_min": 26.93797126527957,
+    "fail_rate": 0.04437193414546617
+  },
+  "user_0045": {
+    "type": "user",
+    "typical_geo": [
+      "BR-SAO",
+      "US-NY"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "typical_resources": [
+      "/api/v1/reports",
+      "/admin/users",
+      "/api/v1/users",
+      "/api/v1/logs"
+    ],
+    "auth_method": "password",
+    "os": "Windows 11",
+    "mac": "e3:55:99:0e:17:a6",
+    "proto": "TLS1.3",
+    "avg_session_min": 15.267872158782309,
+    "fail_rate": 0.01874205448876574
+  },
+  "user_0046": {
+    "type": "user",
+    "typical_geo": [
+      "UK-LDN"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/api/v1/orders",
+      "/api/v1/users"
+    ],
+    "auth_method": "certificate",
+    "os": "CentOS 7",
+    "mac": "7b:fe:49:76:ec:82",
+    "proto": "MQTT",
+    "avg_session_min": 13.936434785570391,
+    "fail_rate": 0.0004698715727435521
+  },
+  "user_0047": {
+    "type": "user",
+    "typical_geo": [
+      "DE-BER",
+      "BR-SAO"
+    ],
+    "typical_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/admin/config",
+      "/api/v1/payments",
+      "/api/v1/reports",
+      "/api/v1/logs"
+    ],
+    "auth_method": "token",
+    "os": "macOS 14",
+    "mac": "65:c4:f7:36:79:c3",
+    "proto": "SSH",
+    "avg_session_min": 25.118417556252577,
+    "fail_rate": 0.04963460218134488
+  },
+  "user_0048": {
+    "type": "user",
+    "typical_geo": [
+      "US-NY",
+      "SG-SGP"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/api/v1/logs",
+      "/api/v1/inventory"
+    ],
+    "auth_method": "token",
+    "os": "Ubuntu 22.04",
+    "mac": "b4:70:61:80:46:31",
+    "proto": "TLS1.3",
+    "avg_session_min": 15.812650938342262,
+    "fail_rate": 0.02204115950814058
+  },
+  "user_0049": {
+    "type": "user",
+    "typical_geo": [
+      "US-TX",
+      "US-CA"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/api/v1/orders",
+      "/api/v1/inventory",
+      "/admin/config",
+      "/api/v1/logs"
+    ],
+    "auth_method": "certificate",
+    "os": "macOS 14",
+    "mac": "54:83:f6:97:ad:3a",
+    "proto": "MQTT",
+    "avg_session_min": 38.701265250410714,
+    "fail_rate": 0.007037850750294134
+  },
+  "user_0050": {
+    "type": "user",
+    "typical_geo": [
+      "SG-SGP"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/api/v1/users",
+      "/api/v1/payments",
+      "/admin/config",
+      "/api/v1/logs",
+      "/api/v1/reports"
+    ],
+    "auth_method": "token",
+    "os": "macOS 14",
+    "mac": "c3:be:37:77:f1:0c",
+    "proto": "SSH",
+    "avg_session_min": 37.03395680601058,
+    "fail_rate": 0.011068360003699502
+  },
+  "user_0051": {
+    "type": "user",
+    "typical_geo": [
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/api/v1/users"
+    ],
+    "auth_method": "password",
+    "os": "macOS 14",
+    "mac": "fc:3b:31:78:45:c6",
+    "proto": "MQTT",
+    "avg_session_min": 17.985403042040893,
+    "fail_rate": 0.04746903842059527
+  },
+  "user_0052": {
+    "type": "user",
+    "typical_geo": [
+      "JP-TYO",
+      "US-TX"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/api/v1/inventory",
+      "/api/v1/payments",
+      "/api/v1/users",
+      "/api/v1/logs",
+      "/api/v1/orders"
+    ],
+    "auth_method": "token",
+    "os": "CentOS 7",
+    "mac": "78:b9:32:bc:b7:1f",
+    "proto": "MQTT",
+    "avg_session_min": 14.655850430155539,
+    "fail_rate": 0.04841034379681934
+  },
+  "user_0053": {
+    "type": "user",
+    "typical_geo": [
+      "US-CA",
+      "UK-LDN"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/api/v1/reports",
+      "/api/v1/orders",
+      "/admin/config",
+      "/api/v1/inventory"
+    ],
+    "auth_method": "password",
+    "os": "Ubuntu 22.04",
+    "mac": "6e:77:a8:4b:01:8d",
+    "proto": "TLS1.2",
+    "avg_session_min": 39.56345565281603,
+    "fail_rate": 0.027010772843157574
+  },
+  "user_0054": {
+    "type": "user",
+    "typical_geo": [
+      "US-CA"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/api/v1/inventory"
+    ],
+    "auth_method": "password",
+    "os": "macOS 14",
+    "mac": "08:59:87:1a:40:d7",
+    "proto": "TLS1.3",
+    "avg_session_min": 31.09828462618985,
+    "fail_rate": 0.023812298271162515
+  },
+  "user_0055": {
+    "type": "user",
+    "typical_geo": [
+      "BR-SAO",
+      "US-CA"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/api/v1/users",
+      "/admin/users",
+      "/api/v1/inventory"
+    ],
+    "auth_method": "certificate",
+    "os": "macOS 14",
+    "mac": "ea:0f:1f:f5:cd:da",
+    "proto": "TLS1.3",
+    "avg_session_min": 22.159409895047883,
+    "fail_rate": 0.04548504145576147
+  },
+  "user_0056": {
+    "type": "user",
+    "typical_geo": [
+      "US-CA"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/api/v1/orders",
+      "/api/v1/logs",
+      "/api/v1/payments"
+    ],
+    "auth_method": "certificate",
+    "os": "macOS 14",
+    "mac": "c3:96:e8:dc:32:3a",
+    "proto": "TLS1.2",
+    "avg_session_min": 20.052447958323523,
+    "fail_rate": 0.04440455109942465
+  },
+  "user_0057": {
+    "type": "user",
+    "typical_geo": [
+      "IN-MUM",
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/api/v1/reports"
+    ],
+    "auth_method": "token",
+    "os": "macOS 14",
+    "mac": "bf:4e:f2:22:2e:2b",
+    "proto": "TLS1.3",
+    "avg_session_min": 20.11567814931091,
+    "fail_rate": 0.03722944845959395
+  },
+  "user_0058": {
+    "type": "user",
+    "typical_geo": [
+      "US-TX",
+      "BR-SAO"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/api/v1/orders",
+      "/api/v1/reports",
+      "/api/v1/payments",
+      "/api/v1/inventory"
+    ],
+    "auth_method": "certificate",
+    "os": "Windows 11",
+    "mac": "93:9f:b4:35:6c:4f",
+    "proto": "MQTT",
+    "avg_session_min": 12.848570418764796,
+    "fail_rate": 0.0054109190963633315
+  },
+  "user_0059": {
+    "type": "user",
+    "typical_geo": [
+      "US-CA",
+      "DE-BER"
+    ],
+    "typical_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/admin/config",
+      "/api/v1/users"
+    ],
+    "auth_method": "password",
+    "os": "macOS 14",
+    "mac": "9e:ad:b3:03:5c:49",
+    "proto": "MQTT",
+    "avg_session_min": 7.435489743691775,
+    "fail_rate": 0.037048452955921
+  },
+  "user_0060": {
+    "type": "user",
+    "typical_geo": [
+      "US-CA"
+    ],
+    "typical_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/api/v1/logs",
+      "/api/v1/payments",
+      "/api/v1/orders",
+      "/api/v1/inventory",
+      "/admin/config"
+    ],
+    "auth_method": "certificate",
+    "os": "macOS 14",
+    "mac": "2b:1a:4f:50:19:29",
+    "proto": "SSH",
+    "avg_session_min": 20.50895410156141,
+    "fail_rate": 0.02120073865564976
+  },
+  "user_0061": {
+    "type": "user",
+    "typical_geo": [
+      "SG-SGP",
+      "DE-BER"
+    ],
+    "typical_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/api/v1/reports"
+    ],
+    "auth_method": "password",
+    "os": "macOS 14",
+    "mac": "f9:9d:17:70:ca:1c",
+    "proto": "TLS1.3",
+    "avg_session_min": 12.154809352380612,
+    "fail_rate": 0.0472662043613322
+  },
+  "user_0062": {
+    "type": "user",
+    "typical_geo": [
+      "DE-BER"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typical_resources": [
+      "/api/v1/users",
+      "/api/v1/reports"
+    ],
+    "auth_method": "certificate",
+    "os": "CentOS 7",
+    "mac": "59:42:c2:75:b5:24",
+    "proto": "MQTT",
+    "avg_session_min": 35.1617526707906,
+    "fail_rate": 0.002115113078139569
+  },
+  "user_0063": {
+    "type": "user",
+    "typical_geo": [
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typical_resources": [
+      "/api/v1/inventory",
+      "/admin/users",
+      "/api/v1/logs",
+      "/api/v1/reports",
+      "/api/v1/payments"
+    ],
+    "auth_method": "password",
+    "os": "CentOS 7",
+    "mac": "0a:a6:57:eb:b9:2d",
+    "proto": "MQTT",
+    "avg_session_min": 34.556952593514396,
+    "fail_rate": 0.012165823741136684
+  },
+  "user_0064": {
+    "type": "user",
+    "typical_geo": [
+      "BR-SAO",
+      "US-CA"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typical_resources": [
+      "/api/v1/reports",
+      "/api/v1/payments",
+      "/api/v1/orders",
+      "/api/v1/users"
+    ],
+    "auth_method": "certificate",
+    "os": "Windows 11",
+    "mac": "63:b2:b3:4b:78:34",
+    "proto": "TLS1.2",
+    "avg_session_min": 13.958887770060546,
+    "fail_rate": 0.008674951122104741
+  },
+  "user_0065": {
+    "type": "user",
+    "typical_geo": [
+      "US-CA"
+    ],
+    "typical_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/api/v1/logs",
+      "/admin/users",
+      "/admin/config",
+      "/api/v1/inventory",
+      "/api/v1/payments"
+    ],
+    "auth_method": "certificate",
+    "os": "macOS 14",
+    "mac": "4d:e1:22:f0:e2:9b",
+    "proto": "SSH",
+    "avg_session_min": 25.699691489085733,
+    "fail_rate": 0.017597111131003828
+  },
+  "user_0066": {
+    "type": "user",
+    "typical_geo": [
+      "DE-BER"
+    ],
+    "typical_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/api/v1/users",
+      "/api/v1/payments"
+    ],
+    "auth_method": "token",
+    "os": "Windows 11",
+    "mac": "2e:c4:ec:15:e6:60",
+    "proto": "SSH",
+    "avg_session_min": 26.17520419245225,
+    "fail_rate": 0.02506836509364138
+  },
+  "user_0067": {
+    "type": "user",
+    "typical_geo": [
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/api/v1/users"
+    ],
+    "auth_method": "password",
+    "os": "CentOS 7",
+    "mac": "e0:51:ba:be:90:c6",
+    "proto": "MQTT",
+    "avg_session_min": 32.10626760008074,
+    "fail_rate": 0.03394488602797906
+  },
+  "user_0068": {
+    "type": "user",
+    "typical_geo": [
+      "IN-MUM"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typical_resources": [
+      "/api/v1/inventory",
+      "/api/v1/payments"
+    ],
+    "auth_method": "token",
+    "os": "Ubuntu 22.04",
+    "mac": "aa:29:48:b3:9e:c8",
+    "proto": "TLS1.2",
+    "avg_session_min": 25.826442985305118,
+    "fail_rate": 0.04690010997828804
+  },
+  "user_0069": {
+    "type": "user",
+    "typical_geo": [
+      "BR-SAO",
+      "SG-SGP"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "typical_resources": [
+      "/api/v1/inventory",
+      "/admin/config"
+    ],
+    "auth_method": "token",
+    "os": "Windows 11",
+    "mac": "b9:9e:5c:6d:ae:f8",
+    "proto": "TLS1.2",
+    "avg_session_min": 12.929006628686054,
+    "fail_rate": 0.006878267658853965
+  },
+  "user_0070": {
+    "type": "user",
+    "typical_geo": [
+      "DE-BER"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/api/v1/inventory"
+    ],
+    "auth_method": "certificate",
+    "os": "Ubuntu 22.04",
+    "mac": "c0:4e:53:5c:54:e0",
+    "proto": "TLS1.3",
+    "avg_session_min": 19.38005140237867,
+    "fail_rate": 0.03381814610942665
+  },
+  "user_0071": {
+    "type": "user",
+    "typical_geo": [
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/api/v1/reports",
+      "/api/v1/payments",
+      "/api/v1/logs"
+    ],
+    "auth_method": "password",
+    "os": "macOS 14",
+    "mac": "e1:ec:90:c3:d6:52",
+    "proto": "TLS1.2",
+    "avg_session_min": 33.044072845304164,
+    "fail_rate": 0.006919926730171561
+  },
+  "user_0072": {
+    "type": "user",
+    "typical_geo": [
+      "US-NY",
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "typical_resources": [
+      "/api/v1/orders",
+      "/api/v1/payments"
+    ],
+    "auth_method": "password",
+    "os": "Ubuntu 22.04",
+    "mac": "8b:e6:4b:df:2e:71",
+    "proto": "MQTT",
+    "avg_session_min": 35.96204208013026,
+    "fail_rate": 0.04652359635631375
+  },
+  "user_0073": {
+    "type": "user",
+    "typical_geo": [
+      "US-NY",
+      "SG-SGP"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "typical_resources": [
+      "/api/v1/orders",
+      "/api/v1/payments",
+      "/api/v1/logs",
+      "/api/v1/users",
+      "/api/v1/inventory"
+    ],
+    "auth_method": "password",
+    "os": "macOS 14",
+    "mac": "4a:46:13:92:f1:47",
+    "proto": "MQTT",
+    "avg_session_min": 20.70105158937863,
+    "fail_rate": 0.00026255991528089664
+  },
+  "user_0074": {
+    "type": "user",
+    "typical_geo": [
+      "US-NY"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "typical_resources": [
+      "/api/v1/inventory",
+      "/api/v1/users",
+      "/api/v1/payments"
+    ],
+    "auth_method": "password",
+    "os": "macOS 14",
+    "mac": "3e:18:7a:d6:ea:20",
+    "proto": "TLS1.3",
+    "avg_session_min": 34.28407022118674,
+    "fail_rate": 0.024991461111880484
+  },
+  "user_0075": {
+    "type": "user",
+    "typical_geo": [
+      "BR-SAO"
+    ],
+    "typical_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "typical_resources": [
+      "/api/v1/inventory",
+      "/api/v1/users",
+      "/admin/config",
+      "/api/v1/payments"
+    ],
+    "auth_method": "password",
+    "os": "CentOS 7",
+    "mac": "5f:2b:b8:22:0a:c7",
+    "proto": "MQTT",
+    "avg_session_min": 6.523704880837182,
+    "fail_rate": 0.019344066076367877
+  },
+  "user_0076": {
+    "type": "user",
+    "typical_geo": [
+      "DE-BER",
+      "US-NY"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "typical_resources": [
+      "/api/v1/reports",
+      "/admin/users",
+      "/api/v1/inventory",
+      "/api/v1/users"
+    ],
+    "auth_method": "certificate",
+    "os": "macOS 14",
+    "mac": "44:16:b4:ad:59:ed",
+    "proto": "MQTT",
+    "avg_session_min": 27.110754671541823,
+    "fail_rate": 0.040574884092380324
+  },
+  "user_0077": {
+    "type": "user",
+    "typical_geo": [
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typical_resources": [
+      "/api/v1/users",
+      "/api/v1/inventory",
+      "/api/v1/orders"
+    ],
+    "auth_method": "password",
+    "os": "macOS 14",
+    "mac": "9e:cb:f2:81:12:61",
+    "proto": "SSH",
+    "avg_session_min": 17.49409616123772,
+    "fail_rate": 0.039042078348921254
+  },
+  "user_0078": {
+    "type": "user",
+    "typical_geo": [
+      "DE-BER",
+      "US-CA"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "typical_resources": [
+      "/api/v1/logs",
+      "/api/v1/reports",
+      "/api/v1/payments",
+      "/api/v1/orders",
+      "/api/v1/inventory"
+    ],
+    "auth_method": "certificate",
+    "os": "CentOS 7",
+    "mac": "bc:88:2a:d9:28:dc",
+    "proto": "TLS1.2",
+    "avg_session_min": 24.091603907062293,
+    "fail_rate": 0.016060571410729703
+  },
+  "user_0079": {
+    "type": "user",
+    "typical_geo": [
+      "IN-MUM"
+    ],
+    "typical_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typical_resources": [
+      "/api/v1/inventory",
+      "/api/v1/orders",
+      "/admin/users",
+      "/api/v1/reports",
+      "/api/v1/payments"
+    ],
+    "auth_method": "token",
+    "os": "Windows 11",
+    "mac": "b4:de:8c:1d:26:cf",
+    "proto": "SSH",
+    "avg_session_min": 22.958010681259324,
+    "fail_rate": 0.03749489921309449
+  },
+  "svc_0080": {
+    "type": "service_account",
+    "typical_geo": [
+      "US-TX"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/payments"
+    ],
+    "auth_method": "token",
+    "os": "CentOS 7",
+    "mac": "11:40:22:78:bb:b9",
+    "proto": "TLS1.3",
+    "avg_session_min": 4.445689615198999,
+    "fail_rate": 0.01134489283448239
+  },
+  "svc_0081": {
+    "type": "service_account",
+    "typical_geo": [
+      "JP-TYO"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/internal/secrets"
+    ],
+    "auth_method": "token",
+    "os": "CentOS 7",
+    "mac": "bd:be:e3:27:46:bb",
+    "proto": "TLS1.3",
+    "avg_session_min": 4.5823064135720495,
+    "fail_rate": 0.012991214734120632
+  },
+  "svc_0082": {
+    "type": "service_account",
+    "typical_geo": [
+      "UK-LDN"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/users"
+    ],
+    "auth_method": "token",
+    "os": "Ubuntu 22.04",
+    "mac": "ff:c6:3c:86:85:e4",
+    "proto": "TLS1.3",
+    "avg_session_min": 2.9311338288134774,
+    "fail_rate": 0.012237543655272852
+  },
+  "svc_0083": {
+    "type": "service_account",
+    "typical_geo": [
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/orders"
+    ],
+    "auth_method": "token",
+    "os": "Ubuntu 22.04",
+    "mac": "25:e7:58:e3:2c:a3",
+    "proto": "TLS1.3",
+    "avg_session_min": 7.010558114400711,
+    "fail_rate": 0.014190809736391764
+  },
+  "svc_0084": {
+    "type": "service_account",
+    "typical_geo": [
+      "BR-SAO"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/admin/config",
+      "/internal/keys",
+      "/api/v1/payments"
+    ],
+    "auth_method": "token",
+    "os": "Ubuntu 22.04",
+    "mac": "b9:72:3e:66:47:79",
+    "proto": "TLS1.3",
+    "avg_session_min": 8.113357547269743,
+    "fail_rate": 0.0005256805361653139
+  },
+  "svc_0085": {
+    "type": "service_account",
+    "typical_geo": [
+      "BR-SAO"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/api/v1/logs",
+      "/api/v1/analytics"
+    ],
+    "auth_method": "token",
+    "os": "Ubuntu 22.04",
+    "mac": "2c:21:9e:cb:f5:d2",
+    "proto": "TLS1.3",
+    "avg_session_min": 7.922480953372282,
+    "fail_rate": 0.016466787990167812
+  },
+  "svc_0086": {
+    "type": "service_account",
+    "typical_geo": [
+      "US-CA"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/admin/users"
+    ],
+    "auth_method": "token",
+    "os": "Windows 11",
+    "mac": "e6:ee:b0:41:5d:42",
+    "proto": "TLS1.3",
+    "avg_session_min": 4.893564578337774,
+    "fail_rate": 0.018214245418937746
+  },
+  "svc_0087": {
+    "type": "service_account",
+    "typical_geo": [
+      "US-NY"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/analytics"
+    ],
+    "auth_method": "token",
+    "os": "Ubuntu 22.04",
+    "mac": "9b:54:52:a5:73:b1",
+    "proto": "TLS1.3",
+    "avg_session_min": 9.527348231286828,
+    "fail_rate": 0.01037795586808412
+  },
+  "svc_0088": {
+    "type": "service_account",
+    "typical_geo": [
+      "DE-BER"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/admin/config"
+    ],
+    "auth_method": "token",
+    "os": "Ubuntu 22.04",
+    "mac": "8c:40:9b:2f:56:4e",
+    "proto": "TLS1.3",
+    "avg_session_min": 2.540805607502131,
+    "fail_rate": 0.012489583748673315
+  },
+  "svc_0089": {
+    "type": "service_account",
+    "typical_geo": [
+      "JP-TYO"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/export",
+      "/api/v1/users"
+    ],
+    "auth_method": "token",
+    "os": "Windows 11",
+    "mac": "29:17:87:6b:d5:0f",
+    "proto": "TLS1.3",
+    "avg_session_min": 5.482342541225044,
+    "fail_rate": 0.012543280205961687
+  },
+  "svc_0090": {
+    "type": "service_account",
+    "typical_geo": [
+      "DE-BER"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/admin/config",
+      "/api/v1/logs",
+      "/api/v1/reports"
+    ],
+    "auth_method": "token",
+    "os": "CentOS 7",
+    "mac": "98:e8:25:1e:50:e1",
+    "proto": "TLS1.3",
+    "avg_session_min": 4.740595715927036,
+    "fail_rate": 0.009288843155506701
+  },
+  "svc_0091": {
+    "type": "service_account",
+    "typical_geo": [
+      "IN-MUM"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/admin/users",
+      "/internal/secrets"
+    ],
+    "auth_method": "token",
+    "os": "macOS 14",
+    "mac": "cc:42:bd:36:a3:7b",
+    "proto": "TLS1.3",
+    "avg_session_min": 5.198253103365728,
+    "fail_rate": 0.005349433489083648
+  },
+  "svc_0092": {
+    "type": "service_account",
+    "typical_geo": [
+      "UK-LDN"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/orders"
+    ],
+    "auth_method": "token",
+    "os": "Windows 11",
+    "mac": "94:c4:d6:7f:51:a7",
+    "proto": "TLS1.3",
+    "avg_session_min": 9.403763817244643,
+    "fail_rate": 0.014422568576442439
+  },
+  "svc_0093": {
+    "type": "service_account",
+    "typical_geo": [
+      "UK-LDN"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/logs"
+    ],
+    "auth_method": "token",
+    "os": "CentOS 7",
+    "mac": "ff:9d:fe:0b:2e:c9",
+    "proto": "TLS1.3",
+    "avg_session_min": 5.5490001672139435,
+    "fail_rate": 0.01933373261104951
+  },
+  "svc_0094": {
+    "type": "service_account",
+    "typical_geo": [
+      "UK-LDN"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/api/v1/users",
+      "/internal/secrets"
+    ],
+    "auth_method": "token",
+    "os": "macOS 14",
+    "mac": "fd:f0:92:04:37:dc",
+    "proto": "TLS1.3",
+    "avg_session_min": 2.2054144959308317,
+    "fail_rate": 0.0052894579958182655
+  },
+  "dev_0095": {
+    "type": "edge_device",
+    "typical_geo": [
+      "IN-MUM"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/api/v1/users"
+    ],
+    "auth_method": "certificate",
+    "os": "CentOS 7",
+    "mac": "1a:63:b9:93:25:c5",
+    "proto": "TLS1.3",
+    "avg_session_min": 3.9398185161825783,
+    "fail_rate": 0.0
+  },
+  "dev_0096": {
+    "type": "edge_device",
+    "typical_geo": [
+      "DE-BER"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/orders"
+    ],
+    "auth_method": "certificate",
+    "os": "Windows 11",
+    "mac": "c9:bf:ad:bb:49:65",
+    "proto": "TLS1.3",
+    "avg_session_min": 2.7503505660678975,
+    "fail_rate": 0.0
+  },
+  "dev_0097": {
+    "type": "edge_device",
+    "typical_geo": [
+      "US-NY"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/orders"
+    ],
+    "auth_method": "certificate",
+    "os": "macOS 14",
+    "mac": "f2:e9:4c:47:a7:a3",
+    "proto": "MQTT",
+    "avg_session_min": 2.268295645399174,
+    "fail_rate": 0.0
+  },
+  "dev_0098": {
+    "type": "edge_device",
+    "typical_geo": [
+      "JP-TYO"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/admin/config",
+      "/api/v1/payments"
+    ],
+    "auth_method": "certificate",
+    "os": "CentOS 7",
+    "mac": "99:f3:08:bc:a9:38",
+    "proto": "TLS1.3",
+    "avg_session_min": 3.1266596383195386,
+    "fail_rate": 0.0
+  },
+  "dev_0099": {
+    "type": "edge_device",
+    "typical_geo": [
+      "US-NY"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/admin/config"
+    ],
+    "auth_method": "certificate",
+    "os": "Ubuntu 22.04",
+    "mac": "1a:f5:57:c2:4b:7c",
+    "proto": "MQTT",
+    "avg_session_min": 3.0765662213185667,
+    "fail_rate": 0.0
+  },
+  "dev_0100": {
+    "type": "edge_device",
+    "typical_geo": [
+      "US-CA"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/users"
+    ],
+    "auth_method": "certificate",
+    "os": "CentOS 7",
+    "mac": "a0:d6:4d:d3:68:d2",
+    "proto": "TLS1.3",
+    "avg_session_min": 4.427679690105442,
+    "fail_rate": 0.0
+  },
+  "dev_0101": {
+    "type": "edge_device",
+    "typical_geo": [
+      "US-NY"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/admin/config"
+    ],
+    "auth_method": "certificate",
+    "os": "Ubuntu 22.04",
+    "mac": "a6:f4:c0:a0:58:eb",
+    "proto": "TLS1.3",
+    "avg_session_min": 2.958229486601736,
+    "fail_rate": 0.0
+  },
+  "dev_0102": {
+    "type": "edge_device",
+    "typical_geo": [
+      "DE-BER"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/orders",
+      "/admin/users"
+    ],
+    "auth_method": "certificate",
+    "os": "macOS 14",
+    "mac": "98:73:98:93:6a:fa",
+    "proto": "TLS1.3",
+    "avg_session_min": 2.659115404409276,
+    "fail_rate": 0.0
+  },
+  "dev_0103": {
+    "type": "edge_device",
+    "typical_geo": [
+      "BR-SAO"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/payments",
+      "/api/v1/users"
+    ],
+    "auth_method": "certificate",
+    "os": "CentOS 7",
+    "mac": "ca:b0:4a:94:15:93",
+    "proto": "MQTT",
+    "avg_session_min": 2.058635813430274,
+    "fail_rate": 0.0
+  },
+  "dev_0104": {
+    "type": "edge_device",
+    "typical_geo": [
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/api/v1/reports"
+    ],
+    "auth_method": "certificate",
+    "os": "Ubuntu 22.04",
+    "mac": "67:8a:8b:46:37:7a",
+    "proto": "MQTT",
+    "avg_session_min": 0.7284444348085881,
+    "fail_rate": 0.0
+  },
+  "dev_0105": {
+    "type": "edge_device",
+    "typical_geo": [
+      "BR-SAO"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/admin/users"
+    ],
+    "auth_method": "certificate",
+    "os": "Ubuntu 22.04",
+    "mac": "1a:33:d3:a9:f1:33",
+    "proto": "MQTT",
+    "avg_session_min": 0.5233165088320851,
+    "fail_rate": 0.0
+  },
+  "dev_0106": {
+    "type": "edge_device",
+    "typical_geo": [
+      "BR-SAO"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/reports"
+    ],
+    "auth_method": "certificate",
+    "os": "CentOS 7",
+    "mac": "f4:66:93:a4:92:1e",
+    "proto": "MQTT",
+    "avg_session_min": 3.4353442868858584,
+    "fail_rate": 0.0
+  },
+  "dev_0107": {
+    "type": "edge_device",
+    "typical_geo": [
+      "UK-LDN"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/orders"
+    ],
+    "auth_method": "certificate",
+    "os": "CentOS 7",
+    "mac": "5a:12:cb:fd:5f:94",
+    "proto": "MQTT",
+    "avg_session_min": 0.541702258160449,
+    "fail_rate": 0.0
+  },
+  "dev_0108": {
+    "type": "edge_device",
+    "typical_geo": [
+      "JP-TYO"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/payments"
+    ],
+    "auth_method": "certificate",
+    "os": "macOS 14",
+    "mac": "e8:fc:44:ef:8b:62",
+    "proto": "MQTT",
+    "avg_session_min": 1.988078435743035,
+    "fail_rate": 0.0
+  },
+  "dev_0109": {
+    "type": "edge_device",
+    "typical_geo": [
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/api/v1/orders"
+    ],
+    "auth_method": "certificate",
+    "os": "Windows 11",
+    "mac": "ac:97:62:59:cf:da",
+    "proto": "TLS1.3",
+    "avg_session_min": 0.8903199643176016,
+    "fail_rate": 0.0
+  },
+  "dev_0110": {
+    "type": "edge_device",
+    "typical_geo": [
+      "US-CA"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/orders"
+    ],
+    "auth_method": "certificate",
+    "os": "CentOS 7",
+    "mac": "a5:7f:03:85:c4:78",
+    "proto": "TLS1.3",
+    "avg_session_min": 3.8919049330165567,
+    "fail_rate": 0.0
+  },
+  "dev_0111": {
+    "type": "edge_device",
+    "typical_geo": [
+      "IN-MUM"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/admin/config",
+      "/admin/users"
+    ],
+    "auth_method": "certificate",
+    "os": "Windows 11",
+    "mac": "85:b8:78:1f:3c:ee",
+    "proto": "TLS1.3",
+    "avg_session_min": 1.2187257135240341,
+    "fail_rate": 0.0
+  },
+  "dev_0112": {
+    "type": "edge_device",
+    "typical_geo": [
+      "BR-SAO"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/admin/users",
+      "/api/v1/users"
+    ],
+    "auth_method": "certificate",
+    "os": "macOS 14",
+    "mac": "bc:71:70:44:f4:4e",
+    "proto": "TLS1.3",
+    "avg_session_min": 3.8648067671788544,
+    "fail_rate": 0.0
+  },
+  "dev_0113": {
+    "type": "edge_device",
+    "typical_geo": [
+      "JP-TYO"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/reports",
+      "/admin/config"
+    ],
+    "auth_method": "certificate",
+    "os": "CentOS 7",
+    "mac": "6f:7e:29:e4:b9:27",
+    "proto": "MQTT",
+    "avg_session_min": 0.777911214005077,
+    "fail_rate": 0.0
+  },
+  "dev_0114": {
+    "type": "edge_device",
+    "typical_geo": [
+      "BR-SAO"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/admin/config"
+    ],
+    "auth_method": "certificate",
+    "os": "Ubuntu 22.04",
+    "mac": "54:a7:e2:3b:69:fa",
+    "proto": "MQTT",
+    "avg_session_min": 4.545002082710631,
+    "fail_rate": 0.0
+  },
+  "dev_0115": {
+    "type": "edge_device",
+    "typical_geo": [
+      "AU-SYD"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/reports"
+    ],
+    "auth_method": "certificate",
+    "os": "Ubuntu 22.04",
+    "mac": "d4:e9:1d:ec:9d:0b",
+    "proto": "TLS1.3",
+    "avg_session_min": 1.645057485804256,
+    "fail_rate": 0.0
+  },
+  "dev_0116": {
+    "type": "edge_device",
+    "typical_geo": [
+      "US-NY"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/admin/config"
+    ],
+    "auth_method": "certificate",
+    "os": "Windows 11",
+    "mac": "17:d8:b0:20:1e:23",
+    "proto": "TLS1.3",
+    "avg_session_min": 0.6428069196038557,
+    "fail_rate": 0.0
+  },
+  "dev_0117": {
+    "type": "edge_device",
+    "typical_geo": [
+      "SG-SGP"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/orders"
+    ],
+    "auth_method": "certificate",
+    "os": "CentOS 7",
+    "mac": "bf:c3:e5:c1:c0:29",
+    "proto": "MQTT",
+    "avg_session_min": 3.440903442884159,
+    "fail_rate": 0.0
+  },
+  "dev_0118": {
+    "type": "edge_device",
+    "typical_geo": [
+      "IN-MUM"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/orders"
+    ],
+    "auth_method": "certificate",
+    "os": "CentOS 7",
+    "mac": "41:72:01:0b:98:ed",
+    "proto": "TLS1.3",
+    "avg_session_min": 2.8937012382354146,
+    "fail_rate": 0.0
+  },
+  "dev_0119": {
+    "type": "edge_device",
+    "typical_geo": [
+      "UK-LDN"
+    ],
+    "typical_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "typical_resources": [
+      "/api/v1/reports"
+    ],
+    "auth_method": "certificate",
+    "os": "macOS 14",
+    "mac": "4f:8d:60:39:10:d6",
+    "proto": "MQTT",
+    "avg_session_min": 1.5829983236444538,
+    "fail_rate": 0.0
+  }
+}
