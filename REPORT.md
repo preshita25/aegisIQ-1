@@ -4,7 +4,7 @@
 
 ---
 
-**Document Type:** Hackathon Deliverable #7 — Assumptions, Metrics & Known Limitations  
+**Document Type:** Hackathon Deliverable — Assumptions, Metrics & Known Limitations  
 **System:** AegisIQ — Enterprise Behavioral Anomaly Detection  
 **Training Data Range:** 2024-01-01 to 2024-02-29  
 **Report Date:** 2026-07-26  
@@ -426,4 +426,4 @@ Within the constraints of a hackathon submission, AegisIQ establishes a rigorous
 
 ---
 
-*End of Report — AegisIQ Technical Report, Deliverable #7*
+*End of Report — AegisIQ Technical Report*
